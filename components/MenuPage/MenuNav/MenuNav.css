@@ -1,0 +1,55 @@
+.menunav-container {
+    width: 35em; 
+    height: 3.75em; 
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menunav-container img {
+    height: 4em; 
+}
+
+.menunav {
+    margin: 1.56em auto; 
+}
+
+.dish_nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.dish_nav img{
+    height: 2.8em;
+    margin: 0.4em 0;
+}
+
+.dish_nav p{
+    color: #FFF;
+}
+
+.set_rolls {
+    filter: invert(100%) brightness(1000%);
+}
+
+.set_rolls.clicked {
+    filter: invert(68%) sepia(51%) saturate(566%) hue-rotate(341deg) brightness(98%);
+    color: #DBB36E;
+}
+
+@media (max-width: 800px) {
+    .menunav-container{
+        width: 20em;
+    }
+    .menunav-container img{
+        height: 2em;
+        margin: 0 0.5em;
+    }
+    .dish_nav p{
+        font-size: 0.8em;
+    }
+}

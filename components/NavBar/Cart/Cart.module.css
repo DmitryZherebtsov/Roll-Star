@@ -1,0 +1,48 @@
+.cart_phone {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.colored{
+    width: 3vw;
+    height: auto;
+    cursor: pointer;
+    margin: 0 1em;
+}
+  
+.colored{
+    transition: 0.3s;
+}
+
+.colored:hover{
+    filter: drop-shadow(0 0 0.5rem #B0824E)
+}
+
+.burger{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .burger{
+        display: block;
+    }
+    .cart_phone{
+        /* width: 3000000vw; GG IDK why */
+        /* margin: 0 1em; */
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart_phone img{
+        width: 2.75em;
+        height: auto;
+        margin: 0 1em;
+    }
+    .phone{
+        margin-right: 0;
+    }
+    
+}

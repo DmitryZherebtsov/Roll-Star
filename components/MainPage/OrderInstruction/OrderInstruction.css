@@ -1,0 +1,47 @@
+
+.instruction{
+    text-align: center;
+    color: #fff;
+}
+
+.stages{
+    margin: 4em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.stages div{
+    width: 15em;
+    margin: 0 3em;
+}
+
+@media (max-width: 768px) {
+    .stages {
+      flex-direction: column; 
+    }
+  
+    .stages > div {
+      width: 80%; 
+      margin: 0 auto 2em; 
+    }
+  
+    .stages > div img {
+      max-width: 100%; 
+    }
+  
+    .stages > div h2 {
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+    }
+  
+    .stages > div p {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stages > div {
+      width: 90%;
+    }
+  }
+  

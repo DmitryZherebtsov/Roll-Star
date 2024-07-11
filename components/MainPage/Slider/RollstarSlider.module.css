@@ -1,0 +1,10 @@
+.rollstarSlider__container {
+    max-width: 1620px;
+    margin: 100px auto;
+    
+}
+.rollstarSlider__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,245 @@
+
+.menu-card{
+    background-color: #0B0B0B;
+    width: 16em;
+    height: auto;
+    padding: 0.9em;
+    margin: 1em;
+}
+
+.dish_img img{
+    width: 16em;
+    height: auto;
+}
+
+.info_dish{
+    color: #fff;
+}
+
+.info_dish h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.description-container{
+    width: 16em;
+    height: 4.6em;
+    margin: 0.5em 0;
+    /* border: 1px solid red; */
+    overflow: hidden; /* Приховати текст, що виходить за рамки */
+    display: -webkit-box; /* Для підтримки багаторядкових ellipsis у WebKit-браузерах */
+    -webkit-box-orient: vertical; /* Для підтримки багаторядкових ellipsis у WebKit-браузерах */
+    -webkit-line-clamp: 5; /* Кількість видимих рядків (змініть відповідно до вашого height) */
+    line-clamp: 3; /* Підтримка для деяких сучасних браузерів */
+    text-overflow: ellipsis; /* Додати три крапки в кінці обрізаного тексту */
+    text-align: justify; /* Вирівнювання тексту по ширині */
+    white-space: normal;
+}
+
+.description{
+    color: #A67B4A;
+    font-size: 0.78em;
+    font-weight: 600;
+}
+
+.price, .to_card{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.price{
+    font-size: 1.3em;
+}
+
+.plus_minus{
+    display: flex;
+    margin: 0.5em 0;
+}
+
+.plus_minus img{
+    cursor: pointer;
+}
+
+.quantity-container{
+    margin: 0 0.5em ;
+}
+
+.knopka{
+    background-color: #A67B4A;
+    border: none;
+    padding: 0 3em;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* .menu-card{
+    background-color: #0B0B0B;
+    width: 19em;
+    height: auto;
+    padding: 0.9em;
+    margin: 0.7em 0.7em;
+    display: flex;
+    flex-direction: column;
+}.menu-card:nth-child(1):only-child {
+    margin: auto 1.25em;
+}
+.menu-card img {
+    width: 17.2em;
+    margin: 0 auto;
+}
+  
+
+.menu-card h1 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.875em;
+    margin-bottom: 0.5625em;
+}
+.add-menu .quantity {
+    color: #FFFFFF;
+    position: relative;
+    top: -0.125em;
+}
+.description-container {
+    max-width: 16em;
+    width: max-content;
+    text-overflow: ellipsis;
+}
+.menu-card h2 {
+    color: #A67B4A;
+    font-size: 0.75em;
+}
+
+.middle-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    height: auto;
+}
+
+.menu-card .price {
+    color: #FFFFFF;
+    font-size: 2.1875em;
+}
+.menu-card .weight {
+    color: #FFFFFF;
+    font-size: 1.5625em;
+    align-self: flex-end;
+}
+.add-menu img {
+    width: 1.875em;
+}
+.add-menu {
+    margin-right: 0.625em;
+}
+.menu-card button {
+    padding: 0.8125em 2.8125em;
+    font-size: 0.8125em;
+    color: #FFFFFF;
+    background-color: #A67B4A;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+.bottom-container {
+    margin-top: 0.625em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-menu {
+    display: flex;
+    gap: 0.625em;
+    align-items: center;
+    top: 0.9375em;
+    position: relative;
+    top: 0.25em;
+}
+.quantity-container {
+    width: 1.56em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus, .minus{
+    cursor: pointer;
+} */
+
+
+/* @media (max-width: 1080px) {
+    .menu-card {
+        width: 28.25em; 
+        height: 12em; 
+        margin: 1.25em auto; 
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-card img {
+        height: 90%;
+        width: auto;
+        margin: auto 0;
+        display: flex;
+        align-items: center;
+    }
+    .menu-card h1 {
+        font-size: 1.25em; 
+        text-align: left;
+    }
+    .content-container {
+        height: 90%;
+        margin: auto 0 auto 0.875em; 
+        width: 100%;
+    }
+    .menu-card .price {
+        font-size: 1.25em;
+    }
+    .menu-card .weight {
+        font-size: 0.75em; 
+    }
+    .bottom-container {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .description-container {
+        height: 2.8125em; 
+        width: 100%;
+    }
+    .add-menu .quantity {
+        top: 0;
+    }
+    .menu-card .middle-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.3125em 0;
+        height: auto;
+    }
+    .menu-card button {
+        font-size: 0.7em;
+        padding: 0.5em 1.875em; 
+        font-size: 0.9375em;
+        background-color: #A67B4A;
+        border: none;
+    }
+    .menu-card h2 {
+        font-size: 0.6875em; 
+    }
+    
+
+/* @media (max-width: 635px){
+    .menu-card button {
+        font-size: 0.7em;
+        padding: 0.5em 1.9em; 
+    }
+} */
+/*@media (max-width: 610px){
+    .menu-card button {
+        font-size: 0.7em;
+        padding: 0.8em 2em; 
+    }
+} 
+
+}*/
