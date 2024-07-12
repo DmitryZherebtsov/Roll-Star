@@ -6,6 +6,7 @@ import MenuPage from './components/MenuPage/MenuPage'
 import { BrowserRouter as Router, Routes , Route} from 'react-router-dom'
 import MainPage from './components/MainPage/MainPage'
 import AboutUsPage from './components/AboutUsPage/AboutUsPage'
+import Reviews from './components/Reviews/Reviews'
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
     <div>
 
       <Router>
+
         <NavBar />
 
           <Routes>
@@ -24,6 +26,8 @@ const App = () => {
             <Route path='/OpenCart' element={<OpenCart/>} />
 
             <Route path='/AboutUsPage' element={<AboutUsPage/>} />
+
+            <Route path='/Reviews' element={<Reviews/>} />
             
           </Routes>
 

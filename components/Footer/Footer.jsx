@@ -14,10 +14,10 @@ const Footer = () => {
                 <div className={style.mobile_footer}>
                     <ul className={style.f_nav}>
                         <h4>Навігація</h4>
-                        <a href='#'>Головна</a>
-                        <a href='##'>Меню</a>
+                        <a href='/'>Головна</a>
+                        <a href='/MenuPage'>Меню</a>
                         <a href='/AboutUsPage'>Про нас</a>
-                        <a href='####'>Відгуки</a>
+                        <a href='/Reviews'>Відгуки</a>
                     </ul>
                 </div>
 

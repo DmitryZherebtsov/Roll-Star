@@ -86,6 +86,8 @@ import confirm from "../assets/confirm.svg"
 import delivery from "../assets/delivery.svg"
 import youarecooked from "../assets/youarecooked.svg"
 
+import user from "../assets/user.png"
+
 export const home_page = {
     mainPicture,
     mainPictureMobile,
@@ -100,7 +102,8 @@ export const home_page = {
     koszyk,
     confirm,
     delivery,
-    youarecooked
+    youarecooked,
+    user
 }
 
 

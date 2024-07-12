@@ -34,7 +34,7 @@ const Navigation = () => {
 
       <a href="/AboutUsPage"> Про нас </a>
 
-      <a href=""> Відгуки </a>
+      <a href="/Reviews"> Відгуки </a>
     </nav>
 
   </div>  
