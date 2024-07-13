@@ -30,12 +30,35 @@ hr {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.burger_nav{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    list-style-type: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 2em 0;
+}
+
+.burger_nav li{
+    padding: 0.5em 2em;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.burger_nav hr{
+    width: 50%;
+    color: #00000080;
+    background-color: #00000080;
+    box-shadow: 0 2px 4px #00000080;
+}
+.burger_nav li:hover{
+    color: #BC864B;
+}
 
 @media (max-width: 800px) {
     .logo_block{
         width: 25%;
     }
-    
+
     .nav_block{
         width: 0%;
     }

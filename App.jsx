@@ -9,12 +9,9 @@ import AboutUsPage from './components/AboutUsPage/AboutUsPage'
 import Reviews from './components/Reviews/Reviews'
 
 const App = () => {
-
   return (
     <div>
-
       <Router>
-
         <NavBar />
 
           <Routes>
@@ -33,7 +30,6 @@ const App = () => {
 
         <Footer />
       </Router>
-
     </div>
   ) 
 }
