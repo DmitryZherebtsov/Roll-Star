@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import style from './OrderedDishes.module.css';
-import { menu_items_list, cart_assets, assets } from '../../../assets/assets';
+import { ordered, cart_assets, assets } from '../../../assets/assets';
 
 const OrderedDishes = () => {
-  const [items, setItems] = useState(menu_items_list);
+  const [items, setItems] = useState(ordered);
   const [itemCounts, setItemCounts] = useState({});
 
   const sum = Object.keys(itemCounts).reduce((total, itemId) => {

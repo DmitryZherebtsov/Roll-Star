@@ -177,6 +177,10 @@ export const nav_assets = {
     hot_dog_menu_dropdown
 }
 
+export const ordered = [
+    
+]
+
 export const menu_items_list = [
     {
         id: "1",
