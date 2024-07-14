@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './OrderedDishes.module.css';
-import { ordered, cart_assets, assets } from '../../../assets/assets';
+import { cart_assets, assets, ordered } from '../../../assets/assets';
 
-const OrderedDishes = () => {
-  const [items, setItems] = useState(ordered);
+const OrderedDishes = ({ items = ordered }) => {
   const [itemCounts, setItemCounts] = useState({});
 
-  const sum = Object.keys(itemCounts).reduce((total, itemId) => {
-    const item = items.find(item => item.id === itemId);
-    return total + (itemCounts[itemId] * item.price);
+  useEffect(() => {
+    const initialCounts = {};
+    items.forEach(item => {
+      initialCounts[item.id] = item.count;
+    });
+    setItemCounts(initialCounts);
+  }, [items]);
+
+  const sum = items.reduce((total, item) => {
+    return total + (itemCounts[item.id] * item.price);
   }, 0);
 
   const handleRemoveItem = (id) => {
@@ -66,7 +72,7 @@ const OrderedDishes = () => {
                   <img onClick={() => decreaseItemCount(item.id)} src={assets.minus} alt="minus" className='minus'/>
 
                   <div className="quantity-container">
-                    <h3 className='quantity'>{itemCounts[item.id] || 0}</h3>
+                    <h3 className='quantity'>{itemCounts[item.id] || item.count}</h3>
                   </div>
               
                   <img onClick={() => increaseItemCount(item.id)} src={assets.plus} alt="plus" className='plus'/>

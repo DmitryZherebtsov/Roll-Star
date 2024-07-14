@@ -43,7 +43,6 @@ const Reviews = ( ) => {
             />
             <span>*</span>
           </div>
-
           <div className='border'>
             <input
               placeholder="Прізвище"
