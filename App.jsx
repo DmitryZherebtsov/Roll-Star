@@ -15,7 +15,7 @@ const App = () => {
         <NavBar />
 
           <Routes>
-
+            
             <Route path='/' element={<MainPage/>} />
 
             <Route path='/MenuPage' element={<MenuPage/>} />

@@ -45,10 +45,10 @@ const Footer = () => {
                             </div>
                         </a>
 
-                        <a href="">
+                        <a  href="mailto:rollstar@gmail.com">
                             <div className={style.socials}>
-                                    <img src={nav_assets.gmail} alt="" />
-                                    <li>rollstar@gmail.com</li>
+                                <img src={nav_assets.gmail} alt="" />
+                                <li>rollstar@gmail.com</li>
                             </div>
                         </a>
                     </ul>

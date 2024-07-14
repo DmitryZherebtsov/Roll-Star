@@ -2,23 +2,28 @@ import React, { useState } from 'react';
 import './Reviews.css';
 import { home_page } from '../../assets/assets';
 
-const Reviews = () => {
+const Reviews = ( ) => {
   const [reviews, setReviews] = useState([]);
+  const [rating, setRating] = useState(5); // це початкове значення рейтингу яке буде 5
+
+  const handleRatingChange = (event) => {
+    setRating(Number(event.target.value));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault(); // prevent default form submission
     const formData = new FormData(event.target); //create FormData object
     const formDataObject = Object.fromEntries(formData.entries()); // Convert FormData to plain object
+    formDataObject.rating = rating; // Додати рейтинг до даних форми
     console.log('Form Data:', formDataObject); //put form data to console
 
     const code = prompt("Введіть шестизначний код який прийшов вам на телефон:");
 
     if (code === "123456") {
       alert("Код прийнято! Вашу форму розглянуть і опублукують.");
-      // Додаємо новий відгук до стану
       setReviews([...reviews, formDataObject]);
-      // Очистити форму після успішної відправки
       event.target.reset();
+      setRating(5); // скинути рейтинг до 5 зірок після надсилання форми
     } else {
       alert("Невірний код. Будь ласка, спробуйте ще раз.");
     }
@@ -72,20 +77,19 @@ const Reviews = () => {
           <div className='rating'>
             <h2>Ваша оцінка: </h2>
             <div className='star-icon'>
-              <input type="radio" name="rating" id="rating1" value="1" />
-              <label htmlFor="rating1" className='fa fa-star'></label>
-
-              <input type="radio" name="rating" id="rating2" value="2" />
-              <label htmlFor="rating2" className='fa fa-star'></label>
-
-              <input type="radio" name="rating" id="rating3" value="3" />
-              <label htmlFor="rating3" className='fa fa-star'></label>
-
-              <input type="radio" name="rating" id="rating4" value="4" />
-              <label htmlFor="rating4" className='fa fa-star'></label>
-
-              <input type="radio" name="rating" id="rating5" value="5" />
-              <label htmlFor="rating5" className='fa fa-star'></label>
+              {[...Array(5)].map((_, i) => (
+                <React.Fragment key={i}>
+                  <input
+                    type="radio"
+                    name="rating"
+                    id={`rating${i + 1}`}
+                    value={i + 1}
+                    checked={rating === i + 1}
+                    onChange={handleRatingChange}
+                  />
+                  <label htmlFor={`rating${i + 1}`} className='fa fa-star'></label>
+                </React.Fragment>
+              ))}
             </div>
           </div>
           <br />
@@ -102,8 +106,8 @@ const Reviews = () => {
         <h1>Відгуки Наших Клієнтів</h1>
         <hr />
         {reviews.map((review, index) => (
-         <div>
-            <div key={index} className='review'>
+          <div key={index}>
+            <div className='review'>
               <div className='review-left'>
                 <div>
                   <img className='review-image' src={home_page.user} alt="" />
@@ -122,11 +126,9 @@ const Reviews = () => {
                   {review.comment}
                 </div>
               </div>
-            
             </div>
             <hr />
           </div>
-
         ))}
       </div>
     </div>
