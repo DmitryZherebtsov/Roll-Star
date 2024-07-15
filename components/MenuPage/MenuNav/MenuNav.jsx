@@ -4,7 +4,7 @@ import "./MenuNav.css"
 
 const MenuNav = ({setGlobalCategory}) => {
     
-    const [category, setCategory] = useState('pizza');
+    const [category, setCategory] = useState('');
     const [clickedCategory, setClickedCategory] = useState('');
 
     useEffect(() => {

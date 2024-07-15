@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import style from './ContactData.module.css'
+import { ordered, ordered_final } from '../../../assets/assets';
 
 const ContactData = () => {
 
@@ -28,7 +29,15 @@ const ContactData = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userData); // Вивід данних в консольку
+    // console.log(userData); // Вивід данних в консольку
+    // console.log(ordered);
+    const combinedData = [userData, ...ordered_final];
+
+    // console.log(combinedData);
+
+    const combinedArray = [combinedData]
+    console.log(combinedArray);
+    
     alert("Ваше замовлення було відправлено!");
   };
 
