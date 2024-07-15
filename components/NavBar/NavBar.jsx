@@ -12,6 +12,10 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  }
+
   return (
     <div>
       <div className={style.head}>
@@ -25,13 +29,13 @@ const NavBar = () => {
       {isMenuOpen && (
         <div>
           <ul className={style.burger_nav}>
-            <li><Link to='/'>Головна</Link></li>
+            <li><Link to='/' onClick={closeMenu}>Головна</Link></li>
             <hr />
-            <li><Link to='/MenuPage'>Меню</Link></li>
+            <li><Link to='/MenuPage' onClick={closeMenu}>Меню</Link></li>
             <hr />
-            <li><Link to='/Reviews'>Відгуки</Link></li>
+            <li><Link to='/Reviews' onClick={closeMenu}>Відгуки</Link></li>
             <hr />
-            <li><Link to='/AboutUsPage'>Про Нас</Link></li>
+            <li><Link to='/AboutUsPage' onClick={closeMenu}>Про Нас</Link></li>
           </ul>
         </div>
       )}
