@@ -39,6 +39,7 @@ const Reviews = ( ) => {
               placeholder="Ім'я"
               type="text"
               name="firstName"
+              maxLength={12}
               required
             />
             <span>*</span>
@@ -48,6 +49,7 @@ const Reviews = ( ) => {
               placeholder="Прізвище"
               type="text"
               name="lastName"
+              maxLength={12}
             />
           </div>
 

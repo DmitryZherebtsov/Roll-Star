@@ -24,7 +24,7 @@ const MainPage = () => {
         <DivideElement />
 
         <OrderInstruction />
-        
+
     </div>
   )
 }
