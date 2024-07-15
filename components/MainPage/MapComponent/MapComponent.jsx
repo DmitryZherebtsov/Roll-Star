@@ -13,8 +13,9 @@ const MapComponent = () => {
             title="GibsonGarage" 
             width="1300" 
             height="450" 
-            style={{border: '0'}} 
-            allowFullScreen="" 
+            style={{border: '4px solid #B1834F'}} 
+            allowFullScreen=""  
+            className="map"
             loading="lazy" >
             </iframe>
         </div>

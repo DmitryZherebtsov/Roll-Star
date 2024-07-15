@@ -112,26 +112,31 @@ export const menu_home_page = [
         _id: "1",
         image: pizza_home,
         name: "Піца",
+        type:"pizza"
     },
     {
         _id: "2",
         image: rollset_home,
         name: "Сети",
+        type:"sushi"
     },
     {
         _id: "3",
         image: rolls_home,
         name: "Роли",
+        type:"sushi"
     },
     {
         _id: "4",
         image: fishdog_home,
-        name: "Хот доги",
+        name: "Фіш-Доги",
+        type:"fishburger"
     },
     {
         _id: "5",
         image: soup_home,
         name: "Супи",
+        type:"soups"
     },
 ]
 
@@ -281,15 +286,15 @@ export const menu_items_list = [
     //     price: 230,
     //     type:"pizza"
     // },
-    // {
-    //     id: "12",
-    //     image: gavajska,
-    //     title: "Гавайська",
-    //     description: "Тісто для піц (н/ф), Томатна основа (н/ф), моцарела, шинка, бекон, салямі, Мисливські ковбаси, куріне філе жар(нф), салямі Пепероні, айсберг",
-    //     weight: 600,
-    //     price: 215,
-    //     type:"pizza"
-    // },
+    {
+        id: "12",
+        image: gavajska,
+        title: "Гавайська",
+        description: "Тісто для піц (н/ф), Томатна основа (н/ф), моцарела, шинка, бекон, салямі, Мисливські ковбаси, куріне філе жар(нф), салямі Пепероні, айсберг",
+        weight: 600,
+        price: 215,
+        type:"pizza"
+    },
     {
         id: "51",
         image: hotSet9,
@@ -319,33 +324,33 @@ export const menu_items_list = [
     },
 ]
 
-export const set_list = [
-    {
-        _id: "1",
-        image: pizza,
-        description: "Піца",
-    },
-    {
-        _id: "2",
-        image: sushi,
-        description: "Сети"
-    },
-    {
-        _id: "3",
-        image: soup,
-        description: "Супи"
-    },
-    {
-        _id: "4",
-        image: rolls,
-        description: "Роли"
-    },
-    {
-        _id: "5",
-        image: fishdog,
-        description: "Хот доги"
-    },
-]
+// export const set_list = [
+//     {
+//         _id: "1",
+//         image: pizza,
+//         description: "Піца",
+//     },
+//     {
+//         _id: "2",
+//         image: sushi,
+//         description: "Сети"
+//     },
+//     {
+//         _id: "3",
+//         image: soup,
+//         description: "Супи"
+//     },
+//     {
+//         _id: "4",
+//         image: rolls,
+//         description: "Роли"
+//     },
+//     {
+//         _id: "5",
+//         image: fishdog,
+//         description: "Фіш-Доги"
+//     },
+// ]
 
 
 

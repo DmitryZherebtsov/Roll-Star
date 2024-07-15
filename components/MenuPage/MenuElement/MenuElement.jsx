@@ -25,7 +25,7 @@ const MenuElement = ({ item, addToCart }) => {
                         price: item.price, 
                         count: itemCount };
       
-      // Додаємо новий елемент до масиву ordered
+      // додаю новий елемент до масиву ordered в assets.js
       const existingItemIndex = ordered.findIndex((orderedItem) => orderedItem.id === NewItem.id);
       if (existingItemIndex !== -1) {
         ordered[existingItemIndex].count += itemCount;

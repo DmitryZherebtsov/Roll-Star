@@ -16,9 +16,9 @@ const NavBar = () => {
     <div>
       <div className={style.head}>
         <div className={style.nav_bar}>
-          <div className={style.logo_block}><Logo /></div>
-          <div className={style.nav_block}><Navigation /></div>
-          <div className={style.cart_block}><Cart toggleMenu={toggleMenu} /></div>
+          <div className={style.logo_block}> <Logo />      </div>
+          <div className={style.nav_block}>  <Navigation /></div>
+          <div className={style.cart_block}> <Cart toggleMenu={toggleMenu} /></div>
         </div>
       </div>
 

@@ -12,7 +12,7 @@ const MenuBar = () => {
         <div className='home_menu_categories'>
             <MenuSets />
         </div>
-
+        <br />
         <p className='home_menu_text'>*Видана страва може відрізнятись від фото</p>
     </div>
   )

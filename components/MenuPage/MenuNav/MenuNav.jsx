@@ -5,7 +5,7 @@ import "./MenuNav.css"
 const MenuNav = ({setGlobalCategory}) => {
     
     const [category, setCategory] = useState('pizza');
-    const [clickedCategory, setClickedCategory] = useState('pizza');
+    const [clickedCategory, setClickedCategory] = useState('');
 
     useEffect(() => {
         setGlobalCategory(category);
@@ -76,7 +76,7 @@ const MenuNav = ({setGlobalCategory}) => {
                         <img
                             src={assets.fishburger}
                             alt="" />
-                        <p className={clickedCategory === 'fishburger' ? 'set_rolls clicked' : 'set_rolls'}>Хот Доги <br /> Фіш Бургери</p>
+                        <p className={clickedCategory === 'fishburger' ? 'set_rolls clicked' : 'set_rolls'}>Фіш-Доги</p>
                     </div>
                 </div>
 
