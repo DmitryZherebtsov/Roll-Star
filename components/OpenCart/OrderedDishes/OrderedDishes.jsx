@@ -19,7 +19,7 @@ const OrderedDishes = ({ items = ordered }) => {
 
   const handleRemoveItem = (id) => {
     const updatedItems = items.filter(item => item.id !== id);
-    setItems(updatedItems);
+    itemCounts(updatedItems);
     setItemCounts(prev => {
       const updatedCounts = { ...prev };
       delete updatedCounts[id];

@@ -219,15 +219,15 @@ export const menu_items_list = [
         price: 210,
         type:"pizza"
     },
-    {
-        id: "4",
-        image: margarita,
-        title: "Маргарита",
-        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
-        weight: 600,
-        price: 160,
-        type:"pizza"
-    },
+    // {
+    //     id: "4",
+    //     image: margarita,
+    //     title: "Маргарита",
+    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
+    //     weight: 600,
+    //     price: 160,
+    //     type:"pizza"
+    // },
     {
         id: "5",
         image: mazeratti,
