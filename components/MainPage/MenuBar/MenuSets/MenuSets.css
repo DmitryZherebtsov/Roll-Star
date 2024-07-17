@@ -27,15 +27,6 @@
   font-size: 2em;
   font-weight: 600;
 }
-/* .name {
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px;
-  border-radius: 3px;
-} */
 
 @media (max-width: 1200px) {
   .menu-item {
@@ -49,14 +40,6 @@
     width: 100%; 
     margin: 0 3em;
   }
-  /* .name {
-    left: 30%;
-    bottom: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-  } */
 }
 
 @media (max-width: 480px) {
@@ -69,9 +52,4 @@
     width: 100%; 
   }
 
-  /* .name {
-    left: 5px;
-    bottom: 5px;
-    font-size: 0.8em;
-  } */
 }

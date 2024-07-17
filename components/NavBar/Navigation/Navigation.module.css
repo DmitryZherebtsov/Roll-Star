@@ -20,7 +20,10 @@
 
 .dropdown:hover{
     .menu{
+        margin-left: 9em;
+        padding: 1em 0;
         width: 20em;
+        height: auto;
         position: absolute;
         display: block;
         background-color: #3E372F;

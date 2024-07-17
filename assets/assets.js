@@ -182,6 +182,40 @@ export const nav_assets = {
     hot_dog_menu_dropdown
 }
 
+export const dropdown_res = [
+    {
+        _id: "1",
+        image: pizza_menu_dropdown,
+        name: "Піца",
+        type:"pizza"
+    },
+    {
+        _id: "2",
+        image: roll_menu_dropdown,
+        name: "Роли | Сети",
+        type:"sushi"
+    },
+    {
+        _id: "3",
+        image: hot_dog_menu_dropdown,
+        name: "Фіш-Доги",
+        type:"fishburger"
+    },
+    {
+        _id: "4",
+        image: soup_menu_dropdown,
+        name: "Супи",
+        type:"soups"
+    },
+    {
+        _id: "5",
+        image: pizza_menu_dropdown,
+        name: "Боули",
+        type:"pizza"
+    }
+]
+
+
 export const ordered = [
     
 ]

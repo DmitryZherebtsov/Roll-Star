@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Navigation.module.css';
-import { nav_assets } from '../../../assets/assets';
+import { nav_assets, dropdown_res } from '../../../assets/assets';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
@@ -9,9 +9,24 @@ const Navigation = () => {
       <nav className={style.navbar}>
         <Link to='/'>Головна </Link>
 
-        <Link to='/MenuPage' className={style.dropdown}> Меню 
-          <img className={style.arrow} src={nav_assets.arrow} alt="" />
+        <Link to='/MenuPage' className={style.dropdown}>Меню 
+          
+        <img className={style.arrow} src={nav_assets.arrow} alt="" />
 
+          <div className={style.menu}>
+            <ul className={style.options}>
+              {dropdown_res.map(item => (
+              <div>
+                <Link to={`/MenuPage/${item.type}`}>
+                  <img className={style.options_img}  src={item.image}/>
+                  <span className={style.white_text}>{item.name}</span>
+                </Link>
+              </div>
+              ))}
+            </ul>
+
+          </div>
+{/* 
           <div className={style.menu}>
             <ul className={style.options}>
               <div>
@@ -42,7 +57,7 @@ const Navigation = () => {
                 </Link>
               </div>
             </ul>
-          </div>
+          </div> */}
         </Link>
 
         <Link to='/AboutUsPage'> Про нас </Link>
