@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import style from './ContactData.module.css'
+import React, { useState } from 'react';
+import style from './ContactData.module.css';
 import { ordered, ordered_final } from '../../../assets/assets';
 import emailjs from 'emailjs-com';
 
 const ContactData = () => {
-
   const [userData, setUserData] = useState({
-    firstName: '',  // Тут в userData будуть вписуватися дані від корисувача
+    firstName: '',  // Тут в userData будуть вписуватися дані від користувача
     lastName: '', // кожен елемент для кожного поля форми
     phone: '',
     email: '',
@@ -28,49 +27,35 @@ const ContactData = () => {
     }));
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // console.log(userData); // Вивід данних в консольку
-  //   // console.log(ordered);
-  //   const combinedData = [userData, ...ordered_final];
-
-  //   // console.log(combinedData);
-
-  //   const combinedArray = [combinedData]
-  //   console.log(combinedArray);
-    
-  //   alert("Ваше замовлення було відправлено!");
-  // };
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const combinedData = {
       user: userData,
-      orders: ordered_final[0] // припускаємо, що ordered_final структурований відповідно до вашого прикладу
+      orders: ordered_final[0]
     };
 
-    // Підготовка вмісту електронного листа
-    const emailContent = `
-      Контактна інформація:
-      Ім'я: ${userData.firstName} ${userData.lastName}
-      Телефон: ${userData.phone}
-      Email: ${userData.email}
-      Адреса: ${userData.street}, буд. ${userData.house}, під'їзд ${userData.entrance}, поверх ${userData.floor}, квартира ${userData.apartment}
+    // вміст електронного листа
+    const totalPrice = combinedData.orders.reduce((acc, item) => acc + (item.price * item.count), 0);
 
-      Замовлення:
-      ${combinedData.orders.map((item, index) => `
-        ${index + 1}. ${item.title} - ${item.count} шт.
-        Опис: ${item.description}
-        Ціна: ${item.price} грн
-      `).join('\n')}
-      
-      Кількість осіб: ${userData.numberOfPersons}
-      Спосіб оплати: ${userData.paymentMethod}
-    `;
+    const emailContent = `Замовлення від ${userData.firstName} ${userData.lastName}
+
+        КОНТАКТНА ІНФОРМАЦІЯ:
+        Телефон: ${userData.phone}
+        Адреса: ${userData.street}, буд. ${userData.house}, під'їзд ${userData.entrance}, поверх ${userData.floor}, квартира ${userData.apartment}
+        Кількість осіб: ${userData.numberOfPersons}
+        Спосіб оплати: ${userData.paymentMethod}
+        Email: ${userData.email}
+
+        ЗАМОВЛЕННЯ:
+          ${combinedData.orders.map((item, index) => ` 
+          ${index + 1}. ${item.title} - ( ${item.count} шт. ) Ціна: ${item.price * item.count} грн`).join('\n')}
+
+          Загальна ціна: ${totalPrice} грн
+      `;
 
     try {
-      await emailjs.send('service_seqpo9b', 'template_g8cf6pm', {
+      await emailjs.send('service_seqpo9b', 'template_7uicn3p', {
         message: emailContent,
         to_email: 'zherebtsovdima31@gmail.com'
       }, 'IOWpIbgbv1Zznt3WH');
@@ -100,9 +85,6 @@ const ContactData = () => {
     });
   };
 
-
-
-
   return (
     <div className={style.contact_data}>
       <form onSubmit={handleSubmit} method="post">
@@ -114,7 +96,7 @@ const ContactData = () => {
               <input
                 placeholder="Ім'я"
                 type="text"
-                name="firstName" // ghjcnj ім'я поля
+                name="firstName" // ім'я поля
                 value={userData.firstName} // тут userData отримує значення поля
                 onChange={handleChange}
                 required
