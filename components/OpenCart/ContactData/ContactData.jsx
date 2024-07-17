@@ -195,7 +195,7 @@ const ContactData = () => {
             </div>
             <div className={style.border}>
               <input
-                placeholder="Коментар"
+                placeholder="Коментар до замовлення"
                 type="text"
                 name="comment"
                 value={userData.comment}
