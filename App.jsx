@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import OpenCart from './components/OpenCart/OpenCart';
 import Footer from './components/Footer/Footer';
@@ -8,7 +8,12 @@ import MainPage from './components/MainPage/MainPage';
 import AboutUsPage from './components/AboutUsPage/AboutUsPage';
 import Reviews from './components/Reviews/Reviews';
 
+// import config from './config.js'
+
 const App = () => {
+
+
+  
   return (
     <div>
       <Router>

@@ -46,6 +46,7 @@ const ContactData = () => {
         Кількість осіб: ${userData.numberOfPersons}
         Спосіб оплати: ${userData.paymentMethod}
         Email: ${userData.email}
+        Коментар: ${userData.comment}
 
         ЗАМОВЛЕННЯ:
           ${combinedData.orders.map((item, index) => ` 
