@@ -11,8 +11,6 @@ import Reviews from './components/Reviews/Reviews';
 // import config from './config.js'
 
 const App = () => {
-
-
   
   return (
     <div>

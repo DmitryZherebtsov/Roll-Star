@@ -25,7 +25,8 @@
 .aboutUsPage img {
     width: 30vw;
     height: auto;
-    margin-right: 20px;
+    margin: 0 2em;
+    border-radius: 2px;
 }
 .row.reverse .image {
     margin-right: 0;
@@ -77,6 +78,7 @@
     }
     .aboutUsPage img{
         width: 100%;
+        margin: 0;
     }
     .aboutUsPage p {
         font-size: 1em;

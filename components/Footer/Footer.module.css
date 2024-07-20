@@ -9,8 +9,8 @@
 }
 
 .footer h4{
-    color: #CCCCCC;
-    margin-bottom: 0.2em;
+    color: #A67B4A;
+    margin-bottom: 0.4em;
 }
 
 .logo{
@@ -23,7 +23,18 @@
     display: flex;
     justify-content: center;
 }
+.navigation_footer_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navigation_footer li{
+    list-style-type: none;
+}
 
+.navigation_footer ul{
+    margin: 0 2em;
+}
 .f_nav{
     display: flex;
     flex-direction: column;
@@ -32,14 +43,6 @@
 .footer img{
     height: 11em;
     cursor: pointer;
-}
-
-.navigation_footer li{
-    list-style-type: none;
-}
-
-.navigation_footer ul{
-    margin: 0 2em;
 }
 
 .socials{
@@ -56,6 +59,12 @@
     margin: 2em 0;
 }
 
+.mobile_footer div{
+    transition: .2s;
+}
+.mobile_footer div:hover{
+    filter: invert(68%) sepia(51%) saturate(566%) hue-rotate(341deg) brightness(200%);
+}
 
 @media (max-width: 800px) {
     nav, .mobile_footer{

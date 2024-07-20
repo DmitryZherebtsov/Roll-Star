@@ -1,7 +1,7 @@
 import mainPicture from "../assets/mainPicture.png"
 import mainPictureMobile from "../assets/mainPictureMobile.png"
 
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import arrow from "../assets/arrow.svg";
 import phone from "../assets/phone-menu.svg";
 import burger from "../assets/burger-menu.svg";
@@ -86,7 +86,7 @@ import confirm from "../assets/confirm.svg"
 import delivery from "../assets/delivery.svg"
 import youarecooked from "../assets/youarecooked.svg"
 
-import user from "../assets/user.png"
+import user from "../assets/user-circle1.svg"
 
 export const home_page = {
     mainPicture,
@@ -271,60 +271,60 @@ export const menu_items_list = [
         price: 250,
         type:"pizza"
     },
-    // {
-    //     id: "6",
-    //     image: meat,
-    //     title: "М’ясна",
-    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка.",
-    //     weight: 630,
-    //     price: 200,
-    //     type:"pizza"
-    // },
-    // {
-    //     id: "7",
-    //     image: mysliwska,
-    //     title: "Мисливська",
-    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без.",
-    //     weight: 600,
-    //     price: 200,
-    //     type:"pizza"
-    // },
-    // {
-    //     id: "8",
-    //     image: proshutoAndMango,
-    //     title: "З Прошуто і Манго",
-    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени.",
-    //     weight: 650,
-    //     price: 230,
-    //     type:"pizza"
-    // },
-    // {
-    //     id: "9",
-    //     image: salami,
-    //     title: "Салямі",
-    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени.",
-    //     weight: 600,
-    //     price: 180,
-    //     type:"pizza"
-    // },
-    // {
-    //     id: "10",
-    //     image: seaProducts,
-    //     title: "з Морепродуктами",
-    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
-    //     weight: 650,
-    //     price: 280,
-    //     type:"pizza"
-    // },
-    // {
-    //     id: "11",
-    //     image: weryMeat,
-    //     title: "Дуже М’ясна",
-    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
-    //     weight: 630,
-    //     price: 230,
-    //     type:"pizza"
-    // },
+    {
+        id: "6",
+        image: meat,
+        title: "М’ясна",
+        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка.",
+        weight: 630,
+        price: 200,
+        type:"pizza"
+    },
+    {
+        id: "7",
+        image: mysliwska,
+        title: "Мисливська",
+        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без.",
+        weight: 600,
+        price: 200,
+        type:"pizza"
+    },
+    {
+        id: "8",
+        image: proshutoAndMango,
+        title: "З Прошуто і Манго",
+        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени.",
+        weight: 650,
+        price: 230,
+        type:"pizza"
+    },
+    {
+        id: "9",
+        image: salami,
+        title: "Салямі",
+        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени.",
+        weight: 600,
+        price: 180,
+        type:"pizza"
+    },
+    {
+        id: "10",
+        image: seaProducts,
+        title: "з Морепродуктами",
+        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
+        weight: 650,
+        price: 280,
+        type:"pizza"
+    },
+    {
+        id: "11",
+        image: weryMeat,
+        title: "Дуже М’ясна",
+        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
+        weight: 630,
+        price: 230,
+        type:"pizza"
+    },
     {
         id: "12",
         image: gavajska,

@@ -2,8 +2,6 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
     margin: 0 auto;
 }
 .menupage-container{
@@ -13,4 +11,3 @@
     flex-wrap: wrap;
     margin: 0 auto;
 }
-

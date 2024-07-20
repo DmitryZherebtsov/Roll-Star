@@ -8,12 +8,12 @@ const Footer = () => {
         <footer>
             <hr />
             
-            <img className={style.navigation_footer} src={nav_assets.logo} alt="" />
+            <img className={style.navigation_footer_img} src={nav_assets.logo} alt="" />
 
             <nav className={style.navigation_footer}>
                 <div className={style.mobile_footer}>
                     <ul className={style.f_nav}>
-                        <h4>Навігація</h4>
+                        <h4>Навігація:</h4>
                         <a href='/'>Головна</a>
                         <a href='/MenuPage'>Меню</a>
                         <a href='/AboutUsPage'>Про нас</a>
@@ -23,24 +23,24 @@ const Footer = () => {
 
                 <div className={style.mobile_footer}>
                     <ul>
-                        <h4>Оформити замовлення</h4>
+                        <h4>Оформити замовлення:</h4>
                         <li>+38(098)090-57-857</li>
                     </ul>
                 </div>
 
                 <div className={style.mobile_footer}>
                     <ul>
-                        <h4>Графік роботи</h4>
-                        <li>з 11:00 до 23:00</li>
+                        <h4>Графік роботи:</h4>
+                        <li>з 11:00 до 22:00</li>
                     </ul>
                 </div>
 
                 <div className={style.mobile_footer}>
                     <ul>
-                        <h4>Соц мережі</h4>
+                        <h4>Соц мережі:</h4>
                         <a href="https://www.instagram.com/rollstar.vinnytsia/">
                             <div className={style.socials}>
-                                <img src={nav_assets.instagram} alt="" />
+                                <img className={style.socials_img} src={nav_assets.instagram} alt="" />
                                 <li>rollstar.vinnytsia</li>
                             </div>
                         </a>
@@ -67,7 +67,8 @@ const Footer = () => {
         <div className={style.bottom_text}>
             <p className={style.navigation_footer}>© 2024 Rollstar</p>
             <p className={style.navigation_footer}>Cуші-бар в Вінниці</p>
-            <p className={style.navigation_footer}>Created by MINDSCAPE</p>
+            <br />
+            <div className={style.navigation_footer}>Created by MINDSCAPE</div>
         </div>
 
     </div>

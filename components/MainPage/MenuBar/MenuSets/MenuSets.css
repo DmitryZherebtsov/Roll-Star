@@ -21,6 +21,8 @@
 .menu-image:hover{
   box-sizing: border-box;
   transform: scale(1.08);
+  border: 1px solid #DBB36E;
+  border-radius: 2px;
 }
 
 .name {
@@ -40,16 +42,20 @@
     width: 100%; 
     margin: 0 3em;
   }
+  .menu-image {
+    width: 90%; 
+    transition: .3s;
+  }
+  .menu-image:hover {
+    border: 4px solid #DBB36E;
+    border-radius: 2px;
+  }
 }
 
 @media (max-width: 480px) {
   .menu-item {
     width: 100%;
-    margin: 0 0 3em;
-  }
-
-  .menu-image {
-    width: 100%; 
+    margin: 0 0 0em;
   }
 
 }

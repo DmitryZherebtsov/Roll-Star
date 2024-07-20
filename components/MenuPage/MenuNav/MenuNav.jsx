@@ -17,7 +17,7 @@ const MenuNav = ({setGlobalCategory}) => {
             setClickedCategory('');
         } else if (category === newCategory) {
             setCategory('pizza');
-            setClickedCategory('pizza');
+            setClickedCategory('');
         } else {
             setCategory(newCategory);
             setClickedCategory(newCategory);
@@ -27,19 +27,6 @@ const MenuNav = ({setGlobalCategory}) => {
     return (
         <div className='menunav'>
             <div className="menunav-container">
-                {/* <img onClick={() => handleCategoryChange('sushi')}
-                    className={category==="sushi"?"active":""} 
-                    src={category === "sushi" ? assets.sushi_menu_active : assets.sushi_menu} />
-                <img onClick={() => handleCategoryChange('pizza')}
-                    className={category==="pizza"?"active":""} 
-                    src={category === "pizza" ? assets.pizza_menu_active : assets.pizza_menu} alt="" />
-                <img onClick={() => handleCategoryChange('soups')} 
-                    className={category==="soups"?"active":""} 
-                    src={category === "soups" ? assets.soups_menu_active : assets.soups_menu} alt="" />
-                <img onClick={() => handleCategoryChange('fishburger')}
-                    className={category==="fishburger"?"active":""} 
-                    src={category === "fishburger" ? assets.fishburger_menu_active : assets.fishburger_menu} alt="" />
-                */}
                 <div className='dish_nav'>
                     <div className={clickedCategory === 'sushi' ? 'set_rolls clicked' : 'set_rolls'}
                         onClick={() => handleCategoryChange('sushi')}>
