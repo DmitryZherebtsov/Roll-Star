@@ -6,7 +6,7 @@ import "./MenuPage.css";
 import MenuNav from './MenuNav/MenuNav';
 
 const MenuPage = () => {
-  const { category: initialCategory } = useParams();
+  const {category: initialCategory} = useParams();
   const [cartItems, setCartItems] = useState([]);
   const [category, setGlobalCategory] = useState(initialCategory || 'pizza');
 
@@ -15,7 +15,6 @@ const MenuPage = () => {
   };
 
   useEffect(() => {
-    // Scroll to the top of the page when category changes
     window.scrollTo(0, 0);
   }, [category]);
 
@@ -27,7 +26,7 @@ const MenuPage = () => {
 
   return (
     <div className='menupage' id='menu'>
-      <MenuNav setGlobalCategory={setGlobalCategory} />
+      <MenuNav category={category} setGlobalCategory={setGlobalCategory} />
       <div className="menupage-container">
         {filteredMenuItems.map((item) => (
           <MenuElement 

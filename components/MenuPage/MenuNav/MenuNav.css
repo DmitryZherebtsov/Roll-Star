@@ -1,9 +1,16 @@
+
 .menunav-container {
     width: 35em; 
     height: 3.75em; 
     align-items: center;
     display: flex;
     justify-content: space-between;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 
 .menunav-container img {

@@ -26,38 +26,6 @@ const Navigation = () => {
             </ul>
 
           </div>
-{/* 
-          <div className={style.menu}>
-            <ul className={style.options}>
-              <div>
-                <Link to='/MenuPage/soups'>
-                  <img className={style.options_img} src={nav_assets.soup_menu_dropdown} alt="" />
-                  <span className={style.white_text}> Супи</span>
-                </Link>
-              </div>
-
-              <div>
-                <Link to='/MenuPage/sushi'>
-                  <img className={style.options_img} src={nav_assets.roll_menu_dropdown} alt="" />
-                  <span className={style.white_text}> Ролли | Сети </span>
-                </Link>
-              </div>
-
-              <div>
-                <Link to='/MenuPage/pizza'>
-                  <img className={style.options_img} src={nav_assets.pizza_menu_dropdown} alt="" />
-                  <span className={style.white_text}> Піца </span>
-                </Link>
-              </div>
-
-              <div style={{paddingBottom: "1.5em"}}>
-                <Link to='/MenuPage/fishburger'>
-                  <img className={style.options_img} src={nav_assets.hot_dog_menu_dropdown} alt="" />
-                  <span className={style.white_text}> Фіш Бургери | Хот Доги </span>
-                </Link>
-              </div>
-            </ul>
-          </div> */}
         </Link>
 
         <Link to='/AboutUsPage'> Про нас </Link>
