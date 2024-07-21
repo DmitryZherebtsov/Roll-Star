@@ -17,6 +17,7 @@
 .border{
     width: 45%;
     border: 1px solid #BA8952;
+    border-radius: 2px;
     padding: 0em 1em 0 1em;
 }
 
@@ -98,6 +99,7 @@ input[type="radio"]:checked + span:before {
 
 .button_submit{
     border: 1px solid white;
+    border-radius: 2px;
     color: white;
     font-weight: 600;
     font-size: 1em;
@@ -126,6 +128,15 @@ select {
     color: #1A1714;
     margin-top: 10px;
 }
+
+@media (max-width: 1200px){
+    .btn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 
 @media (max-width: 800px){
     .border{

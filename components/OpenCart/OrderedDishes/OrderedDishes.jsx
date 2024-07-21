@@ -47,45 +47,47 @@ const OrderedDishes = ({ items = ordered }) => {
     <div className={style.ordered_food}>
       <h1>Ваші Замовлення</h1>
       <br />
-      {items.map(item => (
-        <div className={style.dish} key={item.id}>
-          <div>
-            <img className={style.ordered_food_img} src={item.image} alt={item.title} />
-          </div>
-          <div className={style.description}>
-            <div className={style.first}>
-              <h2 className={style.title}>{item.title}</h2>
-              <img
-                className={style.cross}
-                src={cart_assets.cross}
-                alt=""
-                onClick={() => handleRemoveItem(item.id)}
-              />
+      <div className={style.scroll}>
+        {items.map(item => (
+          <div className={style.dish} key={item.id}>
+            <div>
+              <img className={style.ordered_food_img} src={item.image} alt={item.title} />
             </div>
-            <div className={style.second}>
-              <p className={style.grey}>{item.weight}g</p>
-              <br />
-            </div>
+            <div className={style.description}>
+              <div className={style.first}>
+                <h2 className={style.title}>{item.title}</h2>
+                <img
+                  className={style.cross}
+                  src={cart_assets.cross}
+                  alt=""
+                  onClick={() => handleRemoveItem(item.id)}
+                />
+              </div>
+              <div className={style.second}>
+                <p className={style.grey}>{item.weight}g</p>
+                <br />
+              </div>
 
-            <div className={style.three}>
-                <div className={style.count}>
-                  <img onClick={() => decreaseItemCount(item.id)} src={assets.minus} alt="minus" className='minus'/>
+              <div className={style.three}>
+                  <div className={style.count}>
+                    <img onClick={() => decreaseItemCount(item.id)} src={assets.minus} alt="minus" className='minus'/>
 
-                  <div className="quantity-container">
-                    <h3 className='quantity'>{itemCounts[item.id] || item.count}</h3>
+                    <div className="quantity-container">
+                      <h3 className='quantity'>{itemCounts[item.id] || item.count}</h3>
+                    </div>
+                
+                    <img onClick={() => increaseItemCount(item.id)} src={assets.plus} alt="plus" className='plus'/>
                   </div>
-              
-                  <img onClick={() => increaseItemCount(item.id)} src={assets.plus} alt="plus" className='plus'/>
-                </div>
 
-                <div>
-                  <p className={style.price}>{item.price}грн</p>
-                </div>
+                  <div>
+                    <p className={style.price}>{item.price}грн</p>
+                  </div>
+              </div>
+              
             </div>
-            
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className={style.price_place}>
         <div className={style.price_button}>
           <p>Разом: </p>

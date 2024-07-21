@@ -18,7 +18,7 @@ const App = () => {
         <NavBar />
 
         <Routes>
-          
+  
           <Route path='/' element={<MainPage />} />
 
           <Route path='/MenuPage/:category?' element={<MenuPage />} />
@@ -28,10 +28,11 @@ const App = () => {
           <Route path='/AboutUsPage' element={<AboutUsPage />} />
 
           <Route path='/Reviews' element={<Reviews />} />
-
+        
         </Routes>
 
         <Footer />
+
       </Router>
     </div>
   );

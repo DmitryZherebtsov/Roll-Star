@@ -292,7 +292,7 @@ export const menu_items_list = [
     {
         id: "8",
         image: proshutoAndMango,
-        title: "З Прошуто і Манго",
+        title: "Прошуто і Манго",
         description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени.",
         weight: 650,
         price: 230,
@@ -310,7 +310,7 @@ export const menu_items_list = [
     {
         id: "10",
         image: seaProducts,
-        title: "з Морепродуктами",
+        title: "Морепродукти",
         description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
         weight: 650,
         price: 280,
@@ -346,7 +346,7 @@ export const menu_items_list = [
     {
         id: "101",
         image: tomJamSeaFood,
-        title: "Том-Ям з морепродуктами",
+        title: "Том-Ям з Морепродуктами",
         description: "Лосось, томат чері, кунжут білий+чорний, зеленна цибуля, кокосове молоко, соєвий П/Ф (н/ф), том-ям, бульйон (н/ф)",
         weight: 500,
         price: 200,
