@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { assets, ordered } from "../../../assets/assets"; // Імпортуйте ordered
+import React, { useState, useContext } from 'react';
+import { assets } from "../../../assets/assets";
+import { CartContext } from '../../OpenCart/CartContext';
 import "./MenuElement.css";
 
-const MenuElement = ({ item, addToCart }) => {
+const MenuElement = ({ item }) => {
   const [itemCount, setItemCount] = useState(0);
+  const { addToCart } = useContext(CartContext);
 
   const increaseItemCount = () => {
     setItemCount(prev => prev + 1);
@@ -17,21 +19,7 @@ const MenuElement = ({ item, addToCart }) => {
 
   const handleAddToCart = () => {
     if (itemCount > 0) {
-      const NewItem = { id: item.id, 
-                        image: item.image,
-                        title: item.title, 
-                        description: item.description, 
-                        weight: item.weight, 
-                        price: item.price, 
-                        count: itemCount };
-      
-      const existingItemIndex = ordered.findIndex((orderedItem) => orderedItem.id === NewItem.id);
-      if (existingItemIndex !== -1) {
-        ordered[existingItemIndex].count += itemCount;
-      } else {
-        ordered.push(NewItem);
-      }
-
+      addToCart({ ...item, quantity: itemCount });
       setItemCount(0);
     }
   };

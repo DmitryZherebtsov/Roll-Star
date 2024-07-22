@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import style from './ContactData.module.css';
-import { ordered, ordered_final } from '../../../assets/assets';
 import emailjs from 'emailjs-com';
 
-const ContactData = () => {
+const ContactData = ({ orderedItems }) => {
   const [userData, setUserData] = useState({
-    firstName: '',  // Тут в userData будуть вписуватися дані від користувача
-    lastName: '', // кожен елемент для кожного поля форми
+    firstName: '',
+    lastName: '',
     phone: '',
     email: '',
     street: '',
@@ -18,8 +17,10 @@ const ContactData = () => {
     numberOfPersons: '',
     paymentMethod: ''
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => { // тригериться на зміни в полі вводу
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData((prevData) => ({
       ...prevData, 
@@ -30,13 +31,21 @@ const ContactData = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (orderedItems.length === 0) {
+      alert("Ваш кошик пустий ви не можете відправити замовлення");
+      return;
+    }
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
     const combinedData = {
       user: userData,
-      orders: ordered_final[0]
+      orders: orderedItems
     };
 
-    // вміст електронного листа
-    const totalPrice = combinedData.orders.reduce((acc, item) => acc + (item.price * item.count), 0);
+    const totalPrice = combinedData.orders.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
     const emailContent = `Замовлення від ${userData.firstName} ${userData.lastName}
 
@@ -50,7 +59,7 @@ const ContactData = () => {
 
         ЗАМОВЛЕННЯ:
           ${combinedData.orders.map((item, index) => ` 
-          ${index + 1}. ${item.title} - ( ${item.count} шт. ) Ціна: ${item.price * item.count} грн`).join('\n')}
+          ${index + 1}. ${item.title} - ( ${item.quantity} шт. ) Ціна: ${item.price * item.quantity} грн`).join('\n')}
 
           Загальна ціна: ${totalPrice} грн
       `;
@@ -62,10 +71,15 @@ const ContactData = () => {
       }, 'IOWpIbgbv1Zznt3WH');
 
       alert('Ваше замовлення було відправлено!');
-      clearForm(); // Очистити форму після відправлення
+      // console.log(combinedData);
+      clearForm();
     } catch (error) {
       console.error('Помилка під час відправлення замовлення:', error);
       alert('Сталася помилка під час відправлення замовлення. Спробуйте ще раз.');
+    } finally {
+      setTimeout(() => {
+        setIsSubmitting(false); // 3 секунди блокування кнопки(щоб запобігти спаму на пошту )
+      }, 3000);
     }
   };
 
@@ -252,7 +266,13 @@ const ContactData = () => {
           * Після того, як це замовлення буде відправлено, вам зателефонують для підтвердження
         </p>
         <div className={style.btn}>
-          <button className={style.button_submit} type='submit'>Відправити</button>
+          <button
+            className={style.button_submit}
+            type='submit'
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Відправляється...' : 'Відправити'}
+          </button>
         </div>
       </form>
     </div>

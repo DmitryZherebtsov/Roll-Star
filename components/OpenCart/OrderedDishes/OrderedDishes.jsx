@@ -1,46 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import style from './OrderedDishes.module.css';
-import { cart_assets, assets, ordered } from '../../../assets/assets';
+import { cart_assets, assets } from '../../../assets/assets';
+import { CartContext } from '../CartContext';
 
-const OrderedDishes = ({ items = ordered }) => {
-  const [itemCounts, setItemCounts] = useState({});
+const OrderedDishes = ({ orderedItems }) => {
+  const { increaseQuantity, decreaseQuantity, removeFromCart } = useContext(CartContext);
 
-  useEffect(() => {
-    const initialCounts = {};
-    items.forEach(item => {
-      initialCounts[item.id] = item.count;
-    });
-    setItemCounts(initialCounts);
-  }, [items]);
-
-  const sum = items.reduce((total, item) => {
-    return total + (itemCounts[item.id] * item.price);
-  }, 0);
-
-  const handleRemoveItem = (id) => {
-    const updatedItems = items.filter(item => item.id !== id);
-    itemCounts(updatedItems);
-    setItemCounts(prev => {
-      const updatedCounts = { ...prev };
-      delete updatedCounts[id];
-      return updatedCounts;
-    });
-  };
-
-  const increaseItemCount = (id) => {
-    setItemCounts(prev => ({
-      ...prev,
-      [id]: (prev[id] || 0) + 1
-    }));
-  };
-
-  const decreaseItemCount = (id) => {
-    if (itemCounts[id] > 0) {
-      setItemCounts(prev => ({
-        ...prev,
-        [id]: prev[id] - 1
-      }));
-    }
+  const calculateTotal = () => {
+    return orderedItems.reduce((total, item) => total + item.quantity * item.price, 0);
   };
 
   return (
@@ -48,50 +15,59 @@ const OrderedDishes = ({ items = ordered }) => {
       <h1>Ваші Замовлення</h1>
       <br />
       <div className={style.scroll}>
-        {items.map(item => (
-          <div className={style.dish} key={item.id}>
-            <div>
-              <img className={style.ordered_food_img} src={item.image} alt={item.title} />
-            </div>
-            <div className={style.description}>
-              <div className={style.first}>
-                <h2 className={style.title}>{item.title}</h2>
-                <img
-                  className={style.cross}
-                  src={cart_assets.cross}
-                  alt=""
-                  onClick={() => handleRemoveItem(item.id)}
-                />
+        {orderedItems.length === 0 ? (
+          <p className={style.empty}>Кошик порожній ._.</p>
+        ) : (
+          orderedItems.map((item) => (
+            <div className={style.dish} key={item.id}>
+              <div>
+                <img className={style.ordered_food_img} src={item.image} alt={item.title} />
               </div>
-              <div className={style.second}>
-                <p className={style.grey}>{item.weight}g</p>
-                <br />
-              </div>
-
-              <div className={style.three}>
+              <div className={style.description}>
+                <div className={style.first}>
+                  <h2 className={style.title}>{item.title}</h2>
+                  <img
+                    className={style.cross}
+                    src={cart_assets.cross}
+                    alt=""
+                    onClick={() => removeFromCart(item.id)}
+                  />
+                </div>
+                <div className={style.second}>
+                  <p className={style.grey}>{item.weight}g</p>
+                  <br />
+                </div>
+                <div className={style.three}>
                   <div className={style.count}>
-                    <img onClick={() => decreaseItemCount(item.id)} src={assets.minus} alt="minus" className='minus'/>
-
+                    <img
+                      src={assets.minus}
+                      alt="minus"
+                      className='minus'
+                      onClick={() => decreaseQuantity(item.id)}
+                    />
                     <div className="quantity-container">
-                      <h3 className='quantity'>{itemCounts[item.id] || item.count}</h3>
+                      <h3 className='quantity'>{item.quantity}</h3>
                     </div>
-                
-                    <img onClick={() => increaseItemCount(item.id)} src={assets.plus} alt="plus" className='plus'/>
+                    <img
+                      src={assets.plus}
+                      alt="plus"
+                      className='plus'
+                      onClick={() => increaseQuantity(item.id)}
+                    />
                   </div>
-
                   <div>
-                    <p className={style.price}>{item.price}грн</p>
+                    <p className={style.price}>{item.quantity * item.price} ₴</p>
                   </div>
+                </div>
               </div>
-              
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
       <div className={style.price_place}>
         <div className={style.price_button}>
           <p>Разом: </p>
-          <p> {sum}грн</p>
+          <p>{calculateTotal()} грн</p>
         </div>
       </div>
     </div>
