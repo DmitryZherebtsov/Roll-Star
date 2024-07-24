@@ -12,7 +12,6 @@ import CartProvider from './components/OpenCart/CartContext';
 // import config from './config.js'
 
 const App = () => {
-  
 
   return (
     <div>
@@ -35,7 +34,7 @@ const App = () => {
           </Routes>
 
           <Footer />
-
+          
         </Router>
       </CartProvider>
     </div>

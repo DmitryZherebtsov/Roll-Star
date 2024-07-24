@@ -65,12 +65,17 @@ import gmail from "../assets/gmail.svg";
 // import gmail from "../gmail.svg";
 // import add_icon_green from '../assets/add_icon_green.png'
 
-import slider_img1 from "../assets/slider_image-1.png"
-import slider_img2 from "../assets/slider_image-2.png"
-import slider_img3 from "../assets/slider_image-3.png"
-import slider_img4 from "../assets/slider_img4.jpg"
-import slider_img5 from "../assets/slider_img5.jpg"
-import slider_img6 from "../assets/slider_img6.jpg"
+import slider_img3 from "../assets/slider3.jpg"
+import slider_img5 from "../assets/slider5.jpg"
+import slider_img7 from "../assets/slider7.jpg"
+import slider_img8 from "../assets/slider8.jpg"
+import slider_img9 from "../assets/slider9.jpg"
+import slider_img10 from "../assets/slider10.jpg"
+import slider_img11 from "../assets/slider11.jpg"
+
+import slider_img13 from "../assets/slider_image-3.png"
+import slider_img14 from "../assets/slider_image-2.png"
+import slider_img15 from "../assets/slider_image-1.png"
 
 import pizza_home from "../assets/pizza.jpg"
 import rolls_home from "../assets/rolls.jpg"
@@ -91,12 +96,16 @@ import user from "../assets/user-circle1.svg"
 export const home_page = {
     mainPicture,
     mainPictureMobile,
-    slider_img1,
-    slider_img2,
     slider_img3,
-    slider_img4,
     slider_img5,
-    slider_img6,
+    slider_img7,
+    slider_img8,
+    slider_img9,
+    slider_img10,
+    slider_img11,
+    slider_img13,
+    slider_img14,
+    slider_img15,
     arrow_left,
     arrow_right,
     koszyk,
@@ -233,7 +242,7 @@ export const menu_items_list = [
         description: "Тісто для піц (н/ф), Куряче філє Жар, шинка, Гриби печериці, моцарела, масліни, Помідор, Томатна основа (н/ф)",
         weight: 600,
         price: 205,
-        type:"pizza"
+        type: "pizza"
     },
     {
         id: "2",

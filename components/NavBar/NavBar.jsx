@@ -25,7 +25,7 @@ const NavBar = () => {
           <div className={style.cart_block}> <Cart toggleMenu={toggleMenu} /></div>
         </div>
       </div>
-
+      
       {isMenuOpen && (
         <div>
           <ul className={style.burger_nav}>

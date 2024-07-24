@@ -8,6 +8,7 @@
 .scroll{
     width: 110%;
     height: 45em;
+    padding-right: 0.5em;
     overflow-y: auto;
     overflow-x: hidden;
     border-top: 7px solid #A67B4A;
