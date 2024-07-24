@@ -46,6 +46,8 @@ import seaProducts from "../assets/seaProducts.png"
 import weryMeat from "../assets/weryMeat.png";
 import gavajska from "../assets/gavajska.png";
 
+
+
 import hotSet9 from "../assets/hot-set-9.png";
 
 import tomJamSeaFood from "../assets/tom-jam-sea-food.png";
@@ -251,15 +253,15 @@ export const menu_items_list = [
         price: 210,
         type:"pizza"
     },
-    // {
-    //     id: "4",
-    //     image: margarita,
-    //     title: "Маргарита",
-    //     description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
-    //     weight: 600,
-    //     price: 160,
-    //     type:"pizza"
-    // },
+    {
+        id: "4",
+        image: margarita,
+        title: "Маргарита",
+        description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
+        weight: 600,
+        price: 160,
+        type:"pizza"
+    },
     {
         id: "5",
         image: mazeratti,

@@ -134,7 +134,7 @@ const ContactData = ({ orderedItems }) => {
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder='+380 xx xx xx xxx'
+                placeholder='Номер телефону'
                 maxLength={12}
                 value={userData.phone}
                 onChange={handleChange}

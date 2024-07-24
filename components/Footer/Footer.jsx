@@ -24,7 +24,7 @@ const Footer = () => {
                 <div className={style.mobile_footer}>
                     <ul>
                         <h4>Оформити замовлення:</h4>
-                        <li>+38(098)090-57-857</li>
+                        <li>+38(068)271-18-16</li>
                     </ul>
                 </div>
 
@@ -68,7 +68,11 @@ const Footer = () => {
             <p className={style.navigation_footer}>© 2024 Rollstar</p>
             <p className={style.navigation_footer}>Cуші-бар у Вінниці</p>
             <br />
-            <div className={style.navigation_footer}>Created by MINDSCAPE</div>
+            <div className={style.navigation_footer}>Created by 
+                <a className={style.our_company} href="https://www.instagram.com/mindscape_technologies/">
+                    MINDSCAPE
+                </a>
+            </div>
         </div>
 
     </div>

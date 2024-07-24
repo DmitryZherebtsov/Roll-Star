@@ -21,7 +21,7 @@ const MapComponent = () => {
         </div>
 
         <div className="text-bottom"> Матроса кішки 10а 
-        <span className='logo_title'> +38 068 271 18 16 </span>
+        <span className='logo_title'> +38(068)271-18-16 </span>
         з 11:00 до 22:00
         </div>
     </div>
