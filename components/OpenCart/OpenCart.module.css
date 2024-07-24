@@ -1,6 +1,5 @@
 
 .open_cart{
-    /* border: 3px solid rgb(0, 255, 13); */
     padding: 5px;
     max-width: 1920px;
     margin: 0 auto;
@@ -17,8 +16,6 @@
 }
 
 .main_block{
-    /* border: 1px solid red; */
-    /* width: 85%; */
     margin: 0 auto;
     display: flex;
 }
@@ -29,22 +26,18 @@
 
 .data{
     width: 60%;
-    /* border: 1px solid rgb(0, 17, 255); */
 }
 
 .dishes{
     width: 40%;
-    /* border: 1px solid rgb(206, 0, 144); */
 }
 @media (max-width: 1400px) {
     .data{
         width: 50%;
-        /* border: 1px solid rgb(0, 17, 255); */
     }
     
     .dishes{
         width: 50%;
-        /* border: 1px solid rgb(206, 0, 144); */
     }
 
 }

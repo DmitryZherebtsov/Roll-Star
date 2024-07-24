@@ -35,7 +35,6 @@ function RollstarSliderList() {
                 <img src={home_page.slider_img13} alt="firstSliderImage" className={styles['rollstarSlider__item']}/>
                 <img src={home_page.slider_img14} alt="secondSliderImage" className={styles['rollstarSlider__item']}/>
                 <img src={home_page.slider_img15} alt="thirdSliderImage" className={styles['rollstarSlider__item']}/>
-            
             </div>
             <button id="next-slide" className={styles['slide__button__right']} onClick={clickRightButtonHandler}  ref={rightButton}> <img src={home_page.arrow_left} alt="" /> </button>
         </Fragment>

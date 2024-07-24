@@ -1,3 +1,6 @@
+.aboutUsPage{
+    animation: fadeIn 0.3s ease-in-out;
+}
 .aboutUsPage h1{
     color: #E6E6E6;
     font-size: 35px;

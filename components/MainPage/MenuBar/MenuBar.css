@@ -6,6 +6,7 @@
     -khtml-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 .home_menu_text{

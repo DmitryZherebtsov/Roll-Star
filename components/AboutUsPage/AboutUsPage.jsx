@@ -9,15 +9,15 @@ const AboutUsPage = () => {
         <div className="aboutUsContainer">
             <div className="row">
                 <p>Ми - ваші провідні гурмани міста, які пропонують неперевершені смаки суші та ролів. Але це лише початок нашої історії! У нашому ресторані ви знайдете ще більше смакових сенсацій, завдяки нашим унікальним фіш бургерам та фіш догам.</p>
-                <img className='aboutUsPageImage' src={home_page.slider_img1} />
+                <img className='aboutUsPageImage' src={home_page.slider_img13} />
             </div>
             <div className="row-reverse">
-                <img className='aboutUsPageImage' src={home_page.slider_img2} id='image'/>
+                <img className='aboutUsPageImage' src={home_page.slider_img14} id='image'/>
                 <p> Ми - ваші провідні гурмани міста, які пропонують неперевершені смаки суші та ролів. Але це лише початок нашої історії! У нашому ресторані ви знайдете ще більше смакових сенсацій, завдяки нашим унікальним фіш бургерам та фіш догам.</p>
             </div>
             <div className="row">
                 <p>Чи ви шукаєте смачну альтернативу традиційним ролам і суші, чи просто бажаєте насолодитися вишуканим поєднанням смаків - ми завжди раді вас вітати!</p>
-                <img className='aboutUsPageImage' src={home_page.slider_img3} />
+                <img className='aboutUsPageImage' src={home_page.slider_img15} />
             </div>
         </div>
     </div>
