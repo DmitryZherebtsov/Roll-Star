@@ -12,7 +12,6 @@
 
 .stages div {
   width: 15em;
-  /* border: 2px solid red; */
   margin: 1em 3em;
 }
 
@@ -22,7 +21,7 @@
 
 @media (max-width: 1350px) {
   .stages {
-    justify-content: space-around; /
+    justify-content: space-around;
   }
 
   .stages > div {

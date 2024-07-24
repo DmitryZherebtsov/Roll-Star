@@ -1,7 +1,6 @@
 .contact_data{
     color: white;
 }
-
 .rows {
     width: 100%;
     margin-top: 1em;
@@ -35,12 +34,6 @@
     font-size: 1em;
 }
 
-hr { 
-    width: 100%;
-    height: 0.1vh;
-    background-color: #ffffff;
-    margin: 1em 0;
-}
 label{
     font-size: 1em;
 }

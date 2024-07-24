@@ -13,6 +13,7 @@
     display: none;
     transition: 0.3s;
     z-index: 2; /* Пріоритет випадного меню більший за інші елементи */
+
 }
 .dropdown:hover .menu {
     margin-left: 9em;
@@ -22,6 +23,7 @@
     position: absolute;
     display: block;
     background-color: #3E372F;
+    box-shadow: 8px 8px 22px 0px rgba(0, 0, 0, 0.5);
 }
 
 .options {

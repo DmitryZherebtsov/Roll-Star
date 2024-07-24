@@ -3,46 +3,63 @@
     height: auto;
     display: flex;
     align-items: center;
-    /* border: 1px solid red; */
 }
 
-.colored{
+.colored {
     width: 3vw;
     height: auto;
     cursor: pointer;
     margin: 0 1em;
-}
-  
-.colored{
     transition: 0.3s;
 }
 
-.colored:hover{
-    filter: drop-shadow(0 0 0.5rem #B0824E)
+.colored:hover {
+    filter: drop-shadow(0 0 0.5rem #B0824E);
 }
 
-.burger{
+.burger_icon {
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger_icon .line   {
+    width: 120%;
+    height: 4px;
+    border-radius: 1em;
+    background-color: aliceblue;
+    transition: all 0.3s ease;
+}
+
+.line1 {
+    transform: rotate(45deg) translate(5px, 12px);
+}
+
+.line2{
+    opacity: 0;
+}
+
+.line3{
+    transform: rotate(-45deg) translate(3px, -10px);
 }
 
 @media (max-width: 800px) {
-    .burger{
-        display: block;
+    .burger_icon {
+        display: flex;
     }
-    .cart_phone{
-        /* width: 3000000vw; GG IDK why */
-        /* margin: 0 1em; */
-        /* border: 2px solid red; */
+    .cart_phone {
         display: flex;
         justify-content: space-between;
     }
-    .cart_phone img{
+    .cart_phone img {
         width: 2.75em;
         height: auto;
         margin: 0 1em;
     }
-    .phone{
+    .phone {
         margin-right: 0;
     }
-    
 }

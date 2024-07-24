@@ -56,8 +56,8 @@ const Footer = () => {
 
                 <div className={style.mobile_footer}>
                     <ul>
-                        <h4>Адресса:</h4>
-                        <p>М. Вінниця</p>
+                        <h4>Адреса:</h4>
+                        <p>м. Вінниця</p>
                         <p>вул. Матроса Кішки 10-а</p>
                     </ul>
                 </div>
@@ -66,7 +66,7 @@ const Footer = () => {
 
         <div className={style.bottom_text}>
             <p className={style.navigation_footer}>© 2024 Rollstar</p>
-            <p className={style.navigation_footer}>Cуші-бар в Вінниці</p>
+            <p className={style.navigation_footer}>Cуші-бар у Вінниці</p>
             <br />
             <div className={style.navigation_footer}>Created by MINDSCAPE</div>
         </div>

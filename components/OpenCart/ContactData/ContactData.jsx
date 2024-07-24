@@ -104,7 +104,7 @@ const ContactData = ({ orderedItems }) => {
     <div className={style.contact_data}>
       <form onSubmit={handleSubmit} method="post">
         <div className={style.info_data}>
-          <h1>Контактні Данні </h1>
+          <h1>Контактні Дані </h1>
           <hr />
           <div className={style.rows}>
             <div className={style.border}>
