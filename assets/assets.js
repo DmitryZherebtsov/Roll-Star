@@ -52,18 +52,8 @@ import tomJamSeaFood from "../assets/tom-jam-sea-food.png";
 
 import fishDog from "../assets/fishdog.png";
 
-// import logo from '../../assets/logo.svg';
 import instagram from "../assets/instagram.svg";
 import gmail from "../assets/gmail.svg";
-// import arrowleft from "../arrowleft.png";
-// import arrowright from "../arrowright.png";
-// import basket1 from "../basket1.svg";
-// import tick1 from "../tick1.svg";
-// import car from "../car.svg";
-// import sushi1 from "../sushi1.svg";
-// import instagram from "../instagram.svg";
-// import gmail from "../gmail.svg";
-// import add_icon_green from '../assets/add_icon_green.png'
 
 import slider_img3 from "../assets/slider3.jpg"
 import slider_img5 from "../assets/slider5.jpg"
@@ -72,7 +62,6 @@ import slider_img8 from "../assets/slider8.jpg"
 import slider_img9 from "../assets/slider9.jpg"
 import slider_img10 from "../assets/slider10.jpg"
 import slider_img11 from "../assets/slider11.jpg"
-
 import slider_img13 from "../assets/slider_image-3.png"
 import slider_img14 from "../assets/slider_image-2.png"
 import slider_img15 from "../assets/slider_image-1.png"
