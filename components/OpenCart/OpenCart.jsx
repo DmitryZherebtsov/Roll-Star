@@ -18,7 +18,7 @@ const OpenCart = () => {
           <ContactData orderedItems={cart} />
         </div>
         <div className={style.dishes}>
-            <OrderedDishes orderedItems={cart} />
+          <OrderedDishes orderedItems={cart} />
         </div>
       </div>
       <center><p>Після відправки зачекайте 2-3 секунди до повідомлення</p></center>

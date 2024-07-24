@@ -9,24 +9,23 @@ const Navigation = () => {
       <nav className={style.navbar}>
         <Link to='/'>Головна </Link>
 
-        <Link to='/MenuPage' className={style.dropdown}>Меню 
-          
-        <img className={style.arrow} src={nav_assets.arrow} alt="" />
-
+        <Link to='/MenuPage' className={style.dropdown}>
+          Меню 
+          <img className={style.arrow} src={nav_assets.arrow} alt="" />
           <div className={style.menu}>
             <ul className={style.options}>
               {dropdown_res.map(item => (
-              <div>
-                <Link to={`/MenuPage/${item.type}`}>
-                  <img className={style.options_img}  src={item.image}/>
-                  <span className={style.white_text}>{item.name}</span>
-                </Link>
-              </div>
+                <li>
+                  <Link to={`/MenuPage/${item.type}`} className={style.option_link}>
+                    <img className={style.options_img} src={item.image} alt={item.name} />
+                    <span className={style.white_text}>{item.name}</span>
+                  </Link>
+                </li>
               ))}
             </ul>
-
           </div>
         </Link>
+
 
         <Link to='/AboutUsPage'> Про нас </Link>
         <Link to='/Reviews'> Відгуки </Link>
