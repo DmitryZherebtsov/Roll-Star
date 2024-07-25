@@ -21,7 +21,7 @@ const OrderedDishes = ({ orderedItems }) => {
           orderedItems.map((item) => (
             <div className={style.dish} key={item.id}>
               <div>
-                <img className={style.ordered_food_img} src={item.image} alt={item.title} />
+                <img className={style.ordered_food_img} src={item.image} />
               </div>
               <div className={style.description}>
                 <div className={style.first}>
@@ -29,7 +29,6 @@ const OrderedDishes = ({ orderedItems }) => {
                   <img
                     className={style.cross}
                     src={cart_assets.cross}
-                    alt=""
                     onClick={() => removeFromCart(item.id)}
                   />
                 </div>
@@ -56,7 +55,7 @@ const OrderedDishes = ({ orderedItems }) => {
                     />
                   </div>
                   <div>
-                    <p className={style.price}>{item.quantity * item.price} ₴</p>
+                    <p className={style.price}>{item.quantity * item.price}₴</p>
                   </div>
                 </div>
               </div>

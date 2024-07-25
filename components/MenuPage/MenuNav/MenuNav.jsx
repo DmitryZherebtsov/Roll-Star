@@ -16,6 +16,17 @@ const MenuNav = ({ category, setGlobalCategory }) => {
   return (
     <div className='menunav'>
       <div className="menunav-container">
+
+        {/* <div className='dish_nav'>
+          <div className={category === 'rolls' ? 'set_rolls clicked' : 'set_rolls'}
+              onClick={() => handleCategoryChange('rolls')}>
+            <img
+              src={assets.sushi_white}
+              alt="" />
+            <p className={category === 'rolls' ? 'set_rolls clicked' : 'set_rolls'}>Суші</p>
+          </div>
+        </div> */}
+
         <div className='dish_nav'>
           <div className={category === 'sushi' ? 'set_rolls clicked' : 'set_rolls'}
               onClick={() => handleCategoryChange('sushi')}>
@@ -42,7 +53,7 @@ const MenuNav = ({ category, setGlobalCategory }) => {
             <img
               src={assets.soup}
               alt="" />
-            <p className={category === 'soups' ? 'set_rolls clicked' : 'set_rolls'}>Супи</p>
+            <p className={category === 'soups' ? 'set_rolls clicked' : 'set_rolls'}>Супи | Боули</p>
           </div>
         </div>
 

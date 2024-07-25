@@ -1,14 +1,3 @@
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-}
-  
 .menu-card {
     background-color: #0B0B0B;
     width: 16em;
@@ -18,89 +7,75 @@
     border: 2px solid #1A1714;
     box-shadow: 0px 0px 10px #00000015;
     animation: fadeIn 0.4s ease-in-out;
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
-}
-
-.menu-card{
-    background-color: #0B0B0B;
-    width: 16em;
-    height: auto;
-    padding: 0.9em;
-    margin: 1em;
-    border: 2px solid #1A1714;
-    box-shadow: 0px 0px 10px #00000015;
-    /* animation: fadeIn 0.4s ease-in-out; */
     transition: .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.menu-card:hover{
+.menu-card:hover {
     border: 2px solid #A67B4A;
 }
 
-.dish_img img{
+.dish_img img {
     width: 16em;
     height: auto;
 }
 
-.info_dish{
+.info_dish {
     color: #fff;
 }
 
-.info_dish h1{
+.info_dish h1 {
     font-size: 1.5em;
     text-align: center;
 }
 
-.description-container{
-    width: 16em;
+.description-container {
+    /* width: 16em;
     height: 4.6em;
-    margin: 0.5em 0;
-    /* border: 1px solid red; */
-    overflow: hidden; /* Приховати текст, що виходить за рамки */
-    display: -webkit-box; /* Для підтримки багаторядкових ellipsis у WebKit-браузерах */
-    -webkit-box-orient: vertical; /* Для підтримки багаторядкових ellipsis у WebKit-браузерах */
-    -webkit-line-clamp: 5; /* Кількість видимих рядків (змініть відповідно до вашого height) */
-    line-clamp: 3; /* Підтримка для деяких сучасних браузерів */
-    text-overflow: ellipsis; /* Додати три крапки в кінці обрізаного тексту */
-    text-align: justify; /* Вирівнювання тексту по ширині */
-    white-space: normal;
+    margin: 0.5em 0; */
+    /* overflow: hidden; */
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 3; */
+    /* text-overflow: ellipsis; */
+    /* text-align: justify;
+    white-space: normal; */
+    text-align: justify;
 }
 
-.description{
+.description {
     color: #A67B4A;
     font-size: 0.78em;
     font-weight: 600;
 }
 
-.price, .to_card{
+.price, .to_card {
     display: flex;
     justify-content: space-between;
     color: #fff;
 }
 
-.price{
+.price {
     font-size: 1.3em;
 }
 
-.plus_minus{
+.plus_minus {
     display: flex;
     margin: 0.5em 0;
 }
 
-.plus_minus img{
+.plus_minus img {
     cursor: pointer;
 }
 
-.quantity-container{
+.quantity-container {
     margin: 0 0.5em ;
 }
 
-.knopka{
+.knopka {
     background-color: #A67B4A;
     border: none;
     padding: 0 3em;

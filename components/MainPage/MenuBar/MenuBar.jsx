@@ -14,6 +14,7 @@ const MenuBar = () => {
         </div>
         <br />
         <p className='home_menu_text'>* Видана страва може відрізнятись від фото</p>
+        <br />
     </div>
   )
 }

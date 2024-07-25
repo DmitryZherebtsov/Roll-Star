@@ -1,6 +1,7 @@
+// Main Picture of the web site
 import mainPicture from "../assets/mainPicture.png"
-import mainPictureMobile from "../assets/mainPictureMobile.png"
 
+// Graphic pictures + menu pics
 import logo from "../assets/logo.png";
 import arrow from "../assets/arrow.svg";
 import phone from "../assets/phone-menu.svg";
@@ -14,25 +15,20 @@ import rolls from "../assets/rolls.png";
 import fishburger from "../assets/fishburger.svg";
 import fishdog from "../assets/fishdog.png";
 import cross from "../assets/cross.svg";
+import minus from "../assets/minus.png"
+import plus from "../assets/plus.png"
+import instagram from "../assets/instagram.svg";
+import gmail from "../assets/gmail.svg";
 
+// dropdown menu
 import soup_menu_dropdown from "../assets/soup_menu.svg";
 import roll_menu_dropdown from "../assets/roll_menu.svg";
 import pizza_menu_dropdown from "../assets/pizza_menu.svg";
 import hot_dog_menu_dropdown from "../assets/hot_dog_menu.svg";
 
-import minus from "../assets/minus.png"
-import plus from "../assets/plus.png"
+import sushi_white from "../assets/sushi_white.png";
 
-import fishburger_menu_active from "../assets/fishburger-menu-active.svg"
-import pizza_menu_active from "../assets/pizza-menu-active.svg"
-import sushi_menu_active from "../assets/sushi-menu-active.svg"
-import soups_menu_active from "../assets/soups-menu-active.svg"
-
-import fishburger_menu from "../assets/fishburger-menu.svg"
-import pizza_menu from "../assets/pizza-menu.svg"
-import sushi_menu from "../assets/sushi-menu.svg"
-import soups_menu from "../assets/soups-menu.svg"
-
+// Pizza Menu
 import caprichoza from "../assets/caprichoza.png";
 import cezar from "../assets/cezar.png";
 import diablo from "../assets/diablo.png";
@@ -43,20 +39,35 @@ import mysliwska from "../assets/mysliwska.png"
 import proshutoAndMango from "../assets/proshutoAndMango.png"
 import salami from "../assets/salami.png"
 import seaProducts from "../assets/seaProducts.png"
-import weryMeat from "../assets/weryMeat.png";
+import veryMeat from "../assets/weryMeat.png";
 import gavajska from "../assets/gavajska.png";
 
+// Fish-Dogs Menu & Hand-Rolls
+import fish_dog_vugrem from "../assets/fish_dog_vugrem.jpg";
+import fish_dog_krevetka from "../assets/fish_dog_krevetka.jpg";
+import fish_dog_losos from "../assets/fish_dog_losos.jpg";
+import fish_burger_vugrem from "../assets/fish_burger_vugrem.jpg";
+import fish_burger_losos from "../assets/fish_burger_losos.jpg";
+import fish_burger_tunec from "../assets/fish_burger_tunec.jpg";
+import fish_burger_krevetka from "../assets/fish_burger_krevetka.jpg";
+// import hot_hand_roll_meat from "..asetts/hot_hand_roll_meat.jpg"
+// import hot_hand_roll_cheese from "..asetts/hot_hand_roll_cheese.jpg"
 
+// Sushi-Sets Menu
+import set1 from "../assets/set1.jpg";
+import set2 from "../assets/set2.jpg";
+import set3 from "../assets/set3.jpg";
+import set4 from "../assets/set4.jpg";
+import set5 from "../assets/set5.jpg";
+import set6 from "../assets/set6.jpg";
+import set7 from "../assets/set7.jpg";
+import set8 from "../assets/set8.jpg";
 
-import hotSet9 from "../assets/hot-set-9.png";
+// Soups
+import tom_losos from "../assets/tom_jam_losos.jpg";
+import tom_krewetka from "../assets/tom_jam_krewetka.jpg";
 
-import tomJamSeaFood from "../assets/tom-jam-sea-food.png";
-
-import fishDog from "../assets/fishdog.png";
-
-import instagram from "../assets/instagram.svg";
-import gmail from "../assets/gmail.svg";
-
+// Slider Images
 import slider_img3 from "../assets/slider3.jpg"
 import slider_img5 from "../assets/slider5.jpg"
 import slider_img7 from "../assets/slider7.jpg"
@@ -86,7 +97,6 @@ import user from "../assets/user-circle1.svg"
 
 export const home_page = {
     mainPicture,
-    mainPictureMobile,
     slider_img3,
     slider_img5,
     slider_img7,
@@ -105,7 +115,6 @@ export const home_page = {
     youarecooked,
     user
 }
-
 
 export const menu_home_page = [
     {
@@ -145,23 +154,14 @@ export const assets = {
     plus,
     fishburger,
     pizza,
-    sushi_menu,
-    soups_menu,
-    fishburger_menu_active,
-    pizza_menu_active,
-    sushi_menu_active,
-    soups_menu_active,
     set_rolls,
-    // pizza,
-    // sushi,
-    // soup,
-    // rolls,
-    // fishdog
+    roll_menu_dropdown,
     sushi,
     soup,
     rolls,
     fishdog,
-    tomJamSeaFood
+    sushi_white,
+
 }
 
 export const cart_assets = {
@@ -215,12 +215,11 @@ export const dropdown_res = [
     }
 ]
 
-
 export const ordered = [
     
 ]
 
-export const ordered_final = [
+export const ordered_final = [ // масив з замовленнями + контактні дані 
     ordered
 ]
 
@@ -318,7 +317,7 @@ export const menu_items_list = [
     },
     {
         id: "11",
-        image: weryMeat,
+        image: veryMeat,
         title: "Дуже М’ясна",
         description: "Соус “Кетчунез”, колбаска, оливка, помидорка, тесто хлебное, сьірок без плесени, олень, масло пертушка, виноград.",
         weight: 630,
@@ -334,9 +333,81 @@ export const menu_items_list = [
         price: 215,
         type:"pizza"
     },
+    {   
+        id: "50",
+        image: set1,
+        title: "Сет №1",
+        description: 'Філадельфія з вугрем (н/ф),Філадельфія класична (н/ф),філадельфія з тунцем (н/ф)',
+        weight:930,
+        price:630,
+        type:"sushi"
+    },
     {
         id: "51",
-        image: hotSet9,
+        image: set2,
+        title: "Сет №2",
+        description: 'Філадельфія з вугрем ,Філадельфія класична, Філадельфія гриль з грушою , філадельфія з тунцем',
+        weight:1240,
+        price:835,
+        type:"sushi"
+    },
+    {
+        id: "52",
+        image: set3,
+        title: "Сет №3",
+        description: 'Black Філадельфія гриль з авокадо (н/ф),Black Філадельфія гриль з Манго (н/ф), Black Філадельфія гриль з тунцем (н/ф), Філадельфія гриль з грушою (н/ф)',
+        weight:1240,
+        price:900,
+        type:"sushi"
+    },
+    {
+        id: "53",
+        image: set4,
+        title: "Сет №4",
+        description: 'Black чедер з грушою (н/ф),Філадельфія класична (н/ф),Black Аляска з тунцем (н/ф), Боніто з копченим лососем (н/ф)',
+        weight:1100,
+        price:800,
+        type:sushi
+    },
+    {
+        id: "54",
+        image: set5,
+        title: "Сет №5",
+        description: 'Філадельфія з креветкою (н/ф),Аляска з Лососем (н/ф),Black Аляска з тунцем (н/ф), Філадельфія з копченим лососем (н/ф)',
+        weight:1230,
+        price:880,
+        type:"sushi"
+    },
+    {
+        id: "55",
+        image: set6,
+        title: "Сет №6",
+        description: 'Філадельфія з крабом (н/ф),Футомак з вугрем (н/ф),Філадельфія гриль з грушою (н/ф), Black чедер з жареним лососем (н/ф)',
+        weight:1100,
+        price:900,
+        type:"sushi"
+    },
+    {
+        id: "56",
+        image: set7,
+        title: "Сет №7",
+        description: 'lack Дракон (н/ф),Зелений дракон (н/ф),Золотий дракон (н/ф),Червоний дракон (н/ф) зелений дракон з крев. фрі (н/ф)',
+        weight:1650,
+        price:1350,
+        type:"sushi"
+    },  
+    {
+        id: "57",
+        image: set8,
+        title: "Сет №8",
+        description: 'Філадельфія з копченим лососем (н/ф),Black Аляска з тунцем (н/ф),Боніто з Лососем (н/ф), Філадельфія з креветкою (н/ф),Black чедер з креветкою фрі (н/ф),Філадельфія в кунжуті з лососем (н/ф), футомак з лососем (н/ф),Футомак з вугрем (н/ф)',
+        weight:2200,
+        price:1700,
+        type:"sushi"
+    },
+    {
+        id: "58",
+        image: rollset_home,
         title: "Хот-сет №9",
         description: "Теплий з вугрем (н/ф), теплий з креветкою фрі (н/ф), Black Теплий з лососем (н/ф), Black теплий з копченим лососем (н/ф)",
         weight: 1100,
@@ -345,7 +416,7 @@ export const menu_items_list = [
     },
     {
         id: "101",
-        image: tomJamSeaFood,
+        image: soup_home,
         title: "Том-Ям з Морепродуктами",
         description: "Лосось, томат чері, кунжут білий+чорний, зеленна цибуля, кокосове молоко, соєвий П/Ф (н/ф), том-ям, бульйон (н/ф)",
         weight: 500,
@@ -354,43 +425,65 @@ export const menu_items_list = [
     },
     {
         id: "201",
-        image: fishDog,
-        title: "Фіш-Dog з лососем",
+        image: fish_dog_vugrem,
+        title: "Фіш-Дог з вугрем",
         description: "Рис пф (н/ф), Вершковий сир, зеленна цибуля, кляр для темпури (н/ф), соус спайс (н/ф)",
         weight: 500,
         price: 200,
         type:"fishburger"
     },
+    {
+        id: "202",
+        image: fish_dog_krevetka,
+        title: "Фіш-Дог з креветкою",
+        description: 'Рис пф (н/ф),Вершковий сир,кляр для темпури (н/ф),соус Світ чілі,креветка тигрова',
+        weight: 370,
+        price: 250,
+        type: "fishburger",
+    },
+    {
+        id: "203",
+        image: fish_dog_losos,
+        title: "Фіш-Дог з лососем",
+        description: 'Рис пф (н/ф),Вершковий сир,вугор,сир Чедер,айсберг,соус Унагі,манго,Огірок,кляр для темпури (н/ф)',
+        weight: 370,
+        price: 250,
+        type: "fishburger"
+    },
+    {
+        id: "204",
+        image: fish_burger_tunec,
+        title: "Фіш-бургер з тунцем",
+        description: 'Рис пф (н/ф),Вершковий сир,тунець,сир Чедер,айсберг,соус Унагі,груша,Огірок,кляр для темпури (н/ф)',
+        weight: 430,
+        price: 250,
+        type: "fishburger",
+    },
+    {
+        id: "205",
+        image: fish_burger_losos,
+        title: "Фіш-Бурег з лососем",
+        description: 'Рис пф (н/ф),Вершковий сир,кляр для темпури (н/ф),сир Чедер,соус Унагі,айсберг,Лосось,Авокадо,Огірок',
+        weight: 430,
+        price: 250,
+        type: "fishburger",
+    },
+    {
+        id: "206",
+        image: fish_burger_krevetka,
+        title: "Фіш-Бурег з креветкою",
+        description: 'Рис пф (н/ф),Вершковий сир,кляр для темпури (н/ф),айсберг, Авокадо, Огірок,креветка тигрова,сир Чедер, соус Унагі',
+        weight: 430,
+        price: 250,
+        type: "fishburger"
+    },
+    {
+        id: "207",
+        image: fish_burger_vugrem,
+        title: 'Фіш-Бурег з вугрем',
+        description: 'Рис пф (н/ф),Вершковий сир,вугор,сир Чедер,айсберг,соус Унагі,манго,Огірок,кляр для темпури (н/ф)',
+        weight: 430,
+        price: 250,
+        type: "fishburger"
+    }
 ]
-
-// export const set_list = [
-//     {
-//         _id: "1",
-//         image: pizza,
-//         description: "Піца",
-//     },
-//     {
-//         _id: "2",
-//         image: sushi,
-//         description: "Сети"
-//     },
-//     {
-//         _id: "3",
-//         image: soup,
-//         description: "Супи"
-//     },
-//     {
-//         _id: "4",
-//         image: rolls,
-//         description: "Роли"
-//     },
-//     {
-//         _id: "5",
-//         image: fishdog,
-//         description: "Фіш-Доги"
-//     },
-// ]
-
-
-
-

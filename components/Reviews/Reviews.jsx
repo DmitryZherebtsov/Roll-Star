@@ -105,9 +105,11 @@ const Reviews = ( ) => {
 
       <div className='user-reviews'>
         <h1>Відгуки Наших Клієнтів</h1>
+        <br />
         <hr />
         {reviews.map((review, index) => (
           <div key={index}>
+            <br />
             <div className='review'>
               <div className='review-left'>
                 <div>
@@ -128,6 +130,7 @@ const Reviews = ( ) => {
                 </div>
               </div>
             </div>
+            <br />
             <hr />
           </div>
         ))}
