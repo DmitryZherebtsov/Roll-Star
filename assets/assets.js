@@ -63,9 +63,15 @@ import set6 from "../assets/set6.jpg";
 import set7 from "../assets/set7.jpg";
 import set8 from "../assets/set8.jpg";
 
-// Soups
+// Soups Menu
 import tom_losos from "../assets/tom_jam_losos.jpg";
 import tom_krewetka from "../assets/tom_jam_krewetka.jpg";
+
+// Bouly Menu
+import boul_tuna from "../assets/boul_tuna.jpg";
+import boul_losos from "../assets/boul_losos.jpg";
+import boul_krewetka from "../assets/boul_krewetka.jpg";
+import boul_vugor from "../assets/boul_vugor.jpg";
 
 // Slider Images
 import slider_img3 from "../assets/slider3.jpg"
@@ -481,9 +487,45 @@ export const menu_items_list = [
         id: "207",
         image: fish_burger_vugrem,
         title: 'Фіш-Бурег з вугрем',
-        description: 'Рис пф (н/ф),Вершковий сир,вугор,сир Чедер,айсберг,соус Унагі,манго,Огірок,кляр для темпури (н/ф)',
+        description: 'Рис пф (н/ф),Вершковий сир,вугор,сир Чедер,айсберг, соус Унагі,манго,Огірок,кляр для темпури (н/ф)',
         weight: 430,
         price: 250,
         type: "fishburger"
-    }
+    },
+    {
+        id: "250",
+        image: boul_tuna,
+        title: "Боул з тунцем",
+        description: 'Рис пф (н/ф),салат хіяші,томат чері,айсберг,Огірок,груша,тунець, соус Унагі, кунжут білий+чорний',
+        weight: 340,
+        price: 200,
+        type: "soups"
+    },
+    {
+        id: "251",
+        image: boul_losos,
+        title: "Боул з лососем",
+        description: 'Рис пф (н/ф),салат хіяші,соус Унагі,томат чері,айсберг,Огірок, Авокадо,Лосось,мендаль,кунжут білий+чорний',
+        weight: 340,
+        price: 200,
+        type: "soups"
+    },
+    {
+        id: "252",
+        image: boul_krewetka,
+        title: "Боул з креветкою",
+        description: 'Рис пф (н/ф),салат хіяші,томат чері,айсберг,Огірок,Авокадо,креветка тигрова,соус Унагі,Ікра масага',
+        weight: 340,
+        price: 240,
+        type: "soups"
+    },
+    {
+        id: "253",
+        image: boul_vugor,
+        title: "Боул з вугрем",
+        description: 'Рис пф (н/ф),салат хіяші,томат чері,айсберг,Огірок,манго,вугор,соус Унагі,мендаль,кунжут білий+чорний',
+        weight: 340,
+        price: 250,
+        type: "soups"
+    },
 ]
