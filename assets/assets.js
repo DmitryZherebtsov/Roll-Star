@@ -430,6 +430,24 @@ export const menu_items_list = [
         type:"soups"
     },
     {
+        id: "102",
+        image: tom_losos,
+        title: "Том-Ям з Лососем",
+        description: "Лосось, томат чері, кунжут білий+чорний, зеленна цибуля, кокосове молоко,соєвий П/Ф (н/ф), том-ям, бульйон (н/ф)",
+        weight: 500,
+        price: 200,
+        type:"soups"
+    },
+    {
+        id: "103",
+        image: tom_krewetka,
+        title: "Том-Ям з креветками",
+        description: "Томат чері, креветка бейбі, кунжут білий+чорний, зеленна цибуля, кокосове молоко, соєвий П/Ф (н/ф), том-ям, бульйон (н/ф)",
+        weight: 500,
+        price: 200,
+        type:"soups"
+    },
+    {
         id: "201",
         image: fish_dog_vugrem,
         title: "Фіш-Дог з вугрем",
