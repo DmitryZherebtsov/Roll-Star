@@ -12,7 +12,14 @@
   .fade-in-down {
     animation: fadeInDown 0.4s ease-in-out;
   }
-  
+  .menunav{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   .menunav-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -53,6 +60,15 @@
     color: #DBB36E;
   }
   
+  @media (max-width: 930px) {
+    .menunav-container {
+      grid-template-columns: repeat(3 , 1fr);
+      gap: 2em;
+      margin-top: 0.5em;
+    }
+  }
+
+
   @media (max-width: 800px) {
     .menunav-container {
       grid-template-columns: repeat(3, 1fr);

@@ -21,7 +21,7 @@ const OpenCart = () => {
           <OrderedDishes orderedItems={cart} />
         </div>
       </div>
-      <center><p>Після відправки зачекайте 2-3 секунди до повідомлення</p></center>
+      {/* <center><p>Після відправки зачекайте 2-3 секунди до повідомлення</p></center> */}
       <br />
     </div>
   );
