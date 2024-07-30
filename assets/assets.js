@@ -9,6 +9,8 @@ import burger from "../assets/burger-menu.svg";
 import cart from "../assets/cart-menu.svg";
 import pizza from "../assets/pizza.svg";
 import sushi from "../assets/sushi.png";
+import boul from "../assets/bowl.svg";
+import sushi_roll from "../assets/sushi-roll.svg";
 import set_rolls from "../assets/set-rolls.svg";
 import soup from "../assets/soup.svg";
 import rolls from "../assets/rolls.png";
@@ -164,6 +166,8 @@ export const assets = {
     roll_menu_dropdown,
     sushi,
     soup,
+    boul,
+    sushi_roll,
     rolls,
     fishdog,
     sushi_white,
@@ -215,7 +219,7 @@ export const dropdown_res = [
     },
     {
         _id: "5",
-        image: pizza_menu_dropdown,
+        image: boul,
         name: "Боули",
         type:"pizza"
     }
@@ -230,7 +234,7 @@ export const ordered_final = [ // масив з замовленнями + ко�
 ]
 
 
-export const menu_items_list = [
+export const menu_items_list = [ // Меню
     {
         id: "1",
         image: caprichoza,
@@ -517,7 +521,7 @@ export const menu_items_list = [
         description: 'Рис пф (н/ф),салат хіяші,томат чері,айсберг,Огірок,груша,тунець, соус Унагі, кунжут білий+чорний',
         weight: 340,
         price: 200,
-        type: "soups"
+        type: "bouly"
     },
     {
         id: "251",
@@ -526,7 +530,7 @@ export const menu_items_list = [
         description: 'Рис пф (н/ф),салат хіяші,соус Унагі,томат чері,айсберг,Огірок, Авокадо,Лосось,мендаль,кунжут білий+чорний',
         weight: 340,
         price: 200,
-        type: "soups"
+        type: "bouly"
     },
     {
         id: "252",
@@ -535,7 +539,7 @@ export const menu_items_list = [
         description: 'Рис пф (н/ф),салат хіяші,томат чері,айсберг,Огірок,Авокадо,креветка тигрова,соус Унагі,Ікра масага',
         weight: 340,
         price: 240,
-        type: "soups"
+        type: "bouly"
     },
     {
         id: "253",
@@ -544,6 +548,6 @@ export const menu_items_list = [
         description: 'Рис пф (н/ф),салат хіяші,томат чері,айсберг,Огірок,манго,вугор,соус Унагі,мендаль,кунжут білий+чорний',
         weight: 340,
         price: 250,
-        type: "soups"
+        type: "bouly"
     },
 ]

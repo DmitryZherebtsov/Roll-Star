@@ -1,10 +1,17 @@
-// MenuNav.jsx
-import React, { useEffect } from 'react'
-import { assets } from '../../../assets/assets'
-import "./MenuNav.css"
+import React, { useEffect } from 'react';
+import { assets } from '../../../assets/assets';
+import './MenuNav.css';
+
+const categories = [
+  { id: 'rolls', label: 'Роли', icon: assets.sushi_roll },
+  { id: 'sushi', label: 'Сети', icon: assets.set_rolls },
+  { id: 'pizza', label: 'Піца', icon: assets.pizza },
+  { id: 'soups', label: 'Супи', icon: assets.soup },
+  { id: 'bouly', label: 'Боули', icon: assets.boul },
+  { id: 'fishburger', label: 'Фіш Доги<br />Бургери', icon: assets.fishburger }
+];
 
 const MenuNav = ({ category, setGlobalCategory }) => {
- 
   useEffect(() => {
     setGlobalCategory(category);
   }, [category, setGlobalCategory]);
@@ -15,61 +22,21 @@ const MenuNav = ({ category, setGlobalCategory }) => {
 
   return (
     <div className='menunav'>
-      <div className="menunav-container">
-
-        {/* <div className='dish_nav'>
-          <div className={category === 'rolls' ? 'set_rolls clicked' : 'set_rolls'}
-              onClick={() => handleCategoryChange('rolls')}>
-            <img
-              src={assets.sushi_white}
-              alt="" />
-            <p className={category === 'rolls' ? 'set_rolls clicked' : 'set_rolls'}>Суші</p>
+      <div className='menunav-container'>
+        {categories.map((cat) => (
+          <div key={cat.id} className='dish_nav'>
+            <div
+              className={category === cat.id ? 'category-item clicked' : 'category-item'}
+              onClick={() => handleCategoryChange(cat.id)}
+            >
+              <img src={cat.icon} alt={`${cat.label} icon`} />
+              <p className={category === cat.id ? 'category-item clicked' : 'category-item'} dangerouslySetInnerHTML={{ __html: cat.label }}></p>
+            </div>
           </div>
-        </div> */}
-
-        <div className='dish_nav'>
-          <div className={category === 'sushi' ? 'set_rolls clicked' : 'set_rolls'}
-              onClick={() => handleCategoryChange('sushi')}>
-            <img
-              src={assets.set_rolls}
-              alt="" />
-            <p className={category === 'sushi' ? 'set_rolls clicked' : 'set_rolls'}>Ролли | Сети</p>
-          </div>
-        </div>
-
-        <div className='dish_nav'>
-          <div className={category === 'pizza' ? 'set_rolls clicked' : 'set_rolls'}
-              onClick={() => handleCategoryChange('pizza')}>
-            <img
-              src={assets.pizza}
-              alt="" />
-            <p className={category === 'pizza' ? 'set_rolls clicked' : 'set_rolls'}>Піца</p>
-          </div>
-        </div>
-
-        <div className='dish_nav'>
-          <div className={category === 'soups' ? 'set_rolls clicked' : 'set_rolls'}
-              onClick={() => handleCategoryChange('soups')}>
-            <img
-              src={assets.soup}
-              alt="" />
-            <p className={category === 'soups' ? 'set_rolls clicked' : 'set_rolls'}>Супи | Боули</p>
-          </div>
-        </div>
-
-        <div className='dish_nav'>
-          <div className={category === 'fishburger' ? 'set_rolls clicked' : 'set_rolls'}
-              onClick={() => handleCategoryChange('fishburger')}>
-            <img
-              src={assets.fishburger}
-              alt="" />
-            <p className={category === 'fishburger' ? 'set_rolls clicked' : 'set_rolls'}>Фіш-Доги</p>
-          </div>
-        </div>
-
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MenuNav
+export default MenuNav;

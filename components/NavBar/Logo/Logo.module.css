@@ -1,14 +1,13 @@
 
 .logo{
     height: 14vh;
-    /* width: auto;
-    margin: 1em 0; */
-    /* border: 1px solid red; */
+    width: auto;
 }
 
 @media (max-width: 800px) {
     .logo {
       height: 10vh;
+      width: auto;
     }
   }
   

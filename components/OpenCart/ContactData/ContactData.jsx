@@ -223,6 +223,7 @@ const ContactData = ({ orderedItems }) => {
           <br />
           <h1>Вкажіть кiлькiсть персон </h1>
           <hr />
+          <br />
           <div className={style.border}>
             <input
               type="tel"
