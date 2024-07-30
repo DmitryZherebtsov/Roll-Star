@@ -1,20 +1,20 @@
 import React from 'react';
 import style from './Navigation.module.css';
-import { nav_assets, dropdown_res } from '../../../assets/assets';
+import { nav_assets, dropdown } from '../../../assets/assets';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
     <div className={style.nav}>
       <nav className={style.navbar}>
-        <span className='golovna'><Link to='/'>Головна</Link></span>
+        <Link to='/'>Головна</Link>
 
         <Link to='/MenuPage' className={style.dropdown}>
           Меню 
           <img className={style.arrow} src={nav_assets.arrow} alt="" />
           <div className={style.menu}>
             <ul className={style.options}>
-              {dropdown_res.map(item => (
+              {dropdown.map(item => (
                 <li>
                   <Link to={`/MenuPage/${item.type}`} className={style.option_link}>
                     <img className={style.options_img} src={item.image} alt={item.name} />

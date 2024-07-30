@@ -7,14 +7,14 @@ import arrow from "../assets/arrow.svg";
 import phone from "../assets/phone-menu.svg";
 import burger from "../assets/burger-menu.svg";
 import cart from "../assets/cart-menu.svg";
-import pizza from "../assets/pizza.svg";
 import sushi from "../assets/sushi.png";
-import boul from "../assets/bowl.svg";
 import sushi_roll from "../assets/sushi-roll.svg";
 import set_rolls from "../assets/set-rolls.svg";
+import pizza from "../assets/pizza.svg";
 import soup from "../assets/soup.svg";
-import rolls from "../assets/rolls.png";
+import boul from "../assets/bowl.svg";
 import fishburger from "../assets/fishburger.svg";
+import rolls from "../assets/rolls.png";
 import fishdog from "../assets/fishdog.png";
 import cross from "../assets/cross.svg";
 import minus from "../assets/minus.png"
@@ -29,6 +29,13 @@ import pizza_menu_dropdown from "../assets/pizza_menu.svg";
 import hot_dog_menu_dropdown from "../assets/hot_dog_menu.svg";
 
 import sushi_white from "../assets/sushi_white.png";
+
+import roll_dropdown from "../assets/roll_menu_dropdown.svg";
+import set_dropdown from "../assets/set_menu_dropdown.svg";
+import pizza_dropdown from "../assets/pizza_menu_dropdown.svg";
+import soup_dropdown from "../assets/soup_menu_dropdown.svg";
+import boul_dropdown from "../assets/boul_menu_dropdown.svg";
+import fishdog_dropdown from "../assets/fishdog_menu_dropdown.svg";
 
 // Pizza Menu
 import caprichoza from "../assets/caprichoza.png";
@@ -141,7 +148,7 @@ export const menu_home_page = [
         _id: "3",
         image: rolls_home,
         name: "Роли",
-        type:"sushi"
+        type:"rolls"
     },
     {
         _id: "4",
@@ -154,6 +161,12 @@ export const menu_home_page = [
         image: soup_home,
         name: "Супи",
         type:"soups"
+    },
+    {
+        _id: "6",
+        image: boul_krewetka,
+        name: "Боули",
+        type:"bouly"
     },
 ]
 
@@ -186,42 +199,54 @@ export const nav_assets = {
     burger,
     instagram,
     gmail,
+    roll_dropdown,
+    set_dropdown,
+    pizza_dropdown,
+    soup_dropdown,
+    boul_dropdown,
+    fishdog_dropdown,
     soup_menu_dropdown,
     roll_menu_dropdown,
     pizza_menu_dropdown,
     hot_dog_menu_dropdown
 }
 
-export const dropdown_res = [
+export const dropdown = [
     {
         _id: "1",
-        image: pizza_menu_dropdown,
-        name: "Піца",
-        type:"pizza"
+        image: roll_dropdown,
+        name: "Роли",
+        type:"rolls"
     },
     {
         _id: "2",
-        image: roll_menu_dropdown,
-        name: "Роли | Сети",
+        image: set_dropdown,
+        name: "Сети",
         type:"sushi"
     },
     {
         _id: "3",
-        image: hot_dog_menu_dropdown,
-        name: "Фіш-Доги",
-        type:"fishburger"
+        image: pizza_dropdown,
+        name: "Піца",
+        type: "pizza"
     },
     {
         _id: "4",
-        image: soup_menu_dropdown,
+        image: soup_dropdown,
         name: "Супи",
         type:"soups"
     },
     {
         _id: "5",
-        image: boul,
+        image: boul_dropdown,
         name: "Боули",
-        type:"pizza"
+        type: "bouly"
+    },
+    {
+        _id: "6",
+        image: fishdog_dropdown,
+        name: "Фіш Доги | Бургери",
+        type:"fishburger"
     }
 ]
 
@@ -232,7 +257,6 @@ export const ordered = [
 export const ordered_final = [ // масив з замовленнями + контактні дані 
     ordered
 ]
-
 
 export const menu_items_list = [ // Меню
     {
