@@ -1,10 +1,11 @@
+// MenuElement.jsx
 import React, { useState, useContext } from 'react';
 import { assets } from "../../../assets/assets";
 import { CartContext } from '../../OpenCart/CartContext';
 import "./MenuElement.css";
 
 const MenuElement = ({ item }) => {
-  const [itemCount, setItemCount] = useState(0);
+  const [itemCount, setItemCount] = useState(1);
   const { addToCart } = useContext(CartContext);
 
   const increaseItemCount = () => {

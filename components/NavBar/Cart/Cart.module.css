@@ -6,6 +6,20 @@
     align-items: center;
 }
 
+.cart_container {
+    position: relative;
+}
+  
+.cart_dot {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(245, 33, 33);
+    border-radius: 50%;
+}
+
 .colored {
     width: 3vw;
     height: auto;

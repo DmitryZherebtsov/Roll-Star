@@ -1,22 +1,22 @@
-import React, { createContext, useState } from 'react';
+// CartContext.jsx
+import React, { createContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [cartItemCount, setCartItemCount] = useState(0);
 
   const addToCart = (item) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find(cartItem => cartItem.id === item.id);
       if (existingItem) {
-        // якщо товар вже є в кошику, оновлюю його кількість
         return prevCart.map(cartItem =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
             : cartItem
         );
       } else {
-        // якщо товар новий, додаємо його в кошик з вказаною кількістю
         return [...prevCart, { ...item }];
       }
     });
@@ -46,8 +46,13 @@ const CartProvider = ({ children }) => {
     );
   };
 
+  useEffect(() => {
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    setCartItemCount(count);
+  }, [cart]);
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, cartItemCount }}>
       {children}
     </CartContext.Provider>
   );

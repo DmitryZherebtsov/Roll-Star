@@ -1,9 +1,13 @@
-import React from 'react';
+// Cart.jsx
+import React, { useContext } from 'react';
 import style from './Cart.module.css';
 import { nav_assets } from '../../../assets/assets';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../OpenCart/CartContext';
 
 const Cart = ({ isMenuOpen, toggleMenu }) => {
+  const { cartItemCount } = useContext(CartContext);
+
   return (
     <div className={style.cart_phone}>
       <div>
@@ -12,9 +16,10 @@ const Cart = ({ isMenuOpen, toggleMenu }) => {
         </a>
       </div>
       
-      <div>
+      <div className={style.cart_container}>
         <Link to='/OpenCart' aria-label="Open Cart">
           <img className={style.colored} src={nav_assets.cart} alt="Cart icon" />
+          {cartItemCount > 0 && <span className={style.cart_dot}></span>}
         </Link>
       </div>
 
