@@ -5,7 +5,7 @@ import { home_page } from '../../assets/assets'
 const AboutUsPage = () => {
   return (
     <div className='aboutUsPage'>
-      <h1>Ласкаво просимо до <br /><span className='title-text'>SUSHI BAR & ROLLSTAR!</span></h1>
+      <h1>Ласкаво просимо до <br /><span className='title-text'>ROLLSTAR SUSHI BAR!</span></h1>
         <div className="aboutUsContainer">
             <div className="row">
                 <p>Ласкаво просимо до нашого суші бару, де кожна страва – це справжнє мистецтво смаку! Наші кухарі створюють не просто суші та роли, а кулінарні шедеври, які поєднують традиції та інновації. Якщо ви шукаєте незабутні смаки та оригінальні поєднання, ми завжди раді бачити вас у нашому затишному закладі!</p>
