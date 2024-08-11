@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import style from './ContactData.module.css';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 
 const ContactData = ({ orderedItems }) => {
   const [userData, setUserData] = useState({
@@ -47,6 +47,24 @@ const ContactData = ({ orderedItems }) => {
 
     const totalPrice = combinedData.orders.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
+    const sendDataToServer = (combinedData) => {
+      fetch('http://localhost:8080/api/data', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(combinedData),
+      })
+      .then(response => response.text())
+      .then(result => {
+          console.log(result);
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+      console.log("sendDataToServer")
+  };
+
     const emailContent = `Замовлення від ${userData.firstName} ${userData.lastName}
 
         КОНТАКТНА ІНФОРМАЦІЯ:
@@ -65,10 +83,12 @@ const ContactData = ({ orderedItems }) => {
       `;
 
     try {
-      await emailjs.send('service_seqpo9b', 'template_7uicn3p', {
-        message: emailContent,
-        to_email: 'zherebtsovdima31@gmail.com'
-      }, 'IOWpIbgbv1Zznt3WH');
+      sendDataToServer(combinedData);
+
+      // await emailjs.send('service_seqpo9b', 'template_7uicn3p', {
+      //   message: emailContent,
+      //   to_email: 'zherebtsovdima31@gmail.com'
+      // }, 'IOWpIbgbv1Zznt3WH');
 
       alert('Ваше замовлення було відправлено!');
       // console.log(combinedData);
